@@ -1,0 +1,83 @@
+{
+    "name": "centauri/cms",
+    "description": "A CMS based on Laravel 7",
+    "version": "0.1",
+    "type": "project",
+    "homepage": "https://centauricms.de/",
+    "license": "proprietary",
+
+    "keywords": [
+        "cms",
+        "centauri",
+        "laravel"
+    ],
+
+    "require": {
+        "php": "^7.2",
+        "fideloper/proxy": "^4.0",
+        "laravel/framework": "^7.25",
+        "laravel/tinker": "^2.0",
+        "spatie/db-dumper": "^2.16",
+        "spatie/laravel-blade-javascript": "^2.5"
+    },
+
+    "require-dev": {
+        "facade/ignition": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^4.1",
+        "phpunit/phpunit": "^8.5"
+    },
+
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Centauri\\Provider\\CentauriServiceProvider"
+            ],
+
+            "aliases": {
+                "Centauri": "Centauri\\CMS"
+            }
+        }
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Centauri\\CMS\\": "src/Centauri/",
+            "Centauri\\CMS\\Abstracts\\": "src/Abstracts/",
+            "Centauri\\CMS\\AdditionalDatas\\": "src/AdditionalDatas/",
+            "Centauri\\CMS\\Ajax\\": "src/Ajax/",
+            "Centauri\\CMS\\Application\\": "src/Application/",
+            "Centauri\\CMS\\BladeHelper\\": "src/BladeHelper/",
+            "Centauri\\CMS\\Bootstrapping\\": "src/Bootstrapping/",
+            "Centauri\\CMS\\Caches\\": "src/Caches/",
+            "Centauri\\CMS\\CentauriServer\\": "src/CentauriServer/",
+            "Centauri\\CMS\\Component\\": "src/Component/",
+            "Centauri\\CMS\\Controller\\": "src/Controller/",
+            "Centauri\\CMS\\Event\\": "src/Event/",
+            "Centauri\\CMS\\Exception\\": "src/Exception/",
+            "Centauri\\CMS\\Helper\\": "src/Helper/",
+            "Centauri\\CMS\\Http\\": "src/Http/",
+            "Centauri\\CMS\\Interfaces\\": "src/Interfaces/",
+            "Centauri\\CMS\\Model\\": "src/Model/",
+            "Centauri\\CMS\\Processor\\": "src/Processor/",
+            "Centauri\\CMS\\Resolver\\": "src/Resolver/",
+            "Centauri\\CMS\\Scheduler\\": "src/Scheduler/",
+            "Centauri\\CMS\\Service\\": "src/Service/",
+            "Centauri\\CMS\\Tracker\\": "src/Tracker/",
+            "Centauri\\CMS\\Traits\\": "src/Traits/",
+            "Centauri\\CMS\\Utility\\": "src/Utility/",
+            "Centauri\\CMS\\Validation\\": "src/Validation/"
+        },
+
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
