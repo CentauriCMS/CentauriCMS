@@ -27,8 +27,6 @@ class CentauriServiceProvider extends ServiceProvider
             __DIR__.'/path/to/views' => resource_path('views/vendor/courier'),
         ]);
         */
-
-        var_dump("BOOT YA KSMK");
     }
 
     /**
@@ -42,8 +40,6 @@ class CentauriServiceProvider extends ServiceProvider
         $this->app->make("Centauri\\CMS\\Controller\\CentauriController");
 
         $this->loadViewsFrom($this->getCentauriDir("Views"), "Centauri");
-
-        var_dump("REGISTER YA KSMK");
     }
 
     public function getCentauriDir($dir)
