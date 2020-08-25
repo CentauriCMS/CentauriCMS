@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS;
+namespace Centauri;
 
 use Centauri\Bootstrapping\CentauriBootstrapping;
 use Centauri\Component\ExtensionsComponent;

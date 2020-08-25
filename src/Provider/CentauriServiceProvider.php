@@ -55,6 +55,8 @@ class CentauriServiceProvider extends ServiceProvider
         $this->app->make("Centauri\\Controller\\CentauriController");
 
         $this->loadViewsFrom($this->getCentauriDir("Views"), "Centauri");
+
+        $this->loadRoutesFrom($this->getCentauriDir("Http/CentauriRoutes.php"));
     }
 
     public function getCentauriDir($dir)
