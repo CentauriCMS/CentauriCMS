@@ -14,9 +14,24 @@ class CentauriServiceProvider extends ServiceProvider
     {
         $this->loadMigrationsFrom($this->getCentauriDir("Migrations"));
 
-        $this->publishes([
-            $this->getCentauriDir("config/package.php") => config_path("package.php")
-        ], "config");
+        $centauriConfigFiles = [
+            "backend_layouts",
+            "centauri",
+            "config",
+            "content_elements",
+            "cropper",
+            "forms",
+            "grid_layouts",
+            "model_elements",
+            "schedulers",
+            "server"
+        ];
+
+        foreach($centauriConfigFiles as $ccf) {
+            $this->publishes([
+                $this->getCentauriDir("config/centauri/$ccf.php") => config_path("$ccf.php")
+            ], "config");
+        }
 
         $this->publishes([
             $this->getCentauriDir("database/migrations/") => database_path("migrations")
