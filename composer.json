@@ -49,32 +49,7 @@
 
     "autoload": {
         "psr-4": {
-            "Centauri\\": "src/Centauri/",
-            "Centauri\\Abstracts\\": "src/Abstracts/",
-            "Centauri\\AdditionalDatas\\": "src/AdditionalDatas/",
-            "Centauri\\Ajax\\": "src/Ajax/",
-            "Centauri\\Application\\": "src/Application/",
-            "Centauri\\BladeHelper\\": "src/BladeHelper/",
-            "Centauri\\Bootstrapping\\": "src/Bootstrapping/",
-            "Centauri\\Caches\\": "src/Caches/",
-            "Centauri\\CentauriServer\\": "src/CentauriServer/",
-            "Centauri\\Component\\": "src/Component/",
-            "Centauri\\Controller\\": "src/Controller/",
-            "Centauri\\Event\\": "src/Event/",
-            "Centauri\\Exception\\": "src/Exception/",
-            "Centauri\\Helper\\": "src/Helper/",
-            "Centauri\\Http\\": "src/Http/",
-            "Centauri\\Interfaces\\": "src/Interfaces/",
-            "Centauri\\Model\\": "src/Model/",
-            "Centauri\\Processor\\": "src/Processor/",
-            "Centauri\\Provider\\": "src/Provider/",
-            "Centauri\\Resolver\\": "src/Resolver/",
-            "Centauri\\Scheduler\\": "src/Scheduler/",
-            "Centauri\\Service\\": "src/Service/",
-            "Centauri\\Tracker\\": "src/Tracker/",
-            "Centauri\\Traits\\": "src/Traits/",
-            "Centauri\\Utility\\": "src/Utility/",
-            "Centauri\\Validation\\": "src/Validation/"
+            "Centauri\\": "src/"
         },
 
         "files": [
