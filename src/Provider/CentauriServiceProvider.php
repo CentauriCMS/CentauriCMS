@@ -29,12 +29,12 @@ class CentauriServiceProvider extends ServiceProvider
 
         foreach($centauriConfigFiles as $ccf) {
             $this->publishes([
-                $this->getCentauriDir("config/centauri/$ccf.php") => config_path("$ccf.php")
+                $this->getRootDir("config/centauri/$ccf.php") => config_path("$ccf.php")
             ], "config");
         }
 
         $this->publishes([
-            $this->getCentauriDir("database/migrations/") => database_path("migrations")
+            $this->getCentauriDir("Migrations/") => database_path("migrations")
         ], "migrations");
 
         /* VIEWS
@@ -62,5 +62,10 @@ class CentauriServiceProvider extends ServiceProvider
     public function getCentauriDir($dir)
     {
         return __DIR__ . "/../" . $dir;
+    }
+
+    public function getRootDir($dir)
+    {
+        return __DIR__ . "/../../" . $dir;
     }
 }
