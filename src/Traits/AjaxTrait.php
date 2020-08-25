@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\Traits;
+namespace Centauri\Traits;
 
-use Centauri\CMS\Abstracts\AjaxAbstract;
-use Centauri\CMS\Centauri;
+use Centauri\Abstracts\AjaxAbstract;
+use Centauri\Centauri;
 use Error;
 use ErrorException;
 use Illuminate\Http\Request;

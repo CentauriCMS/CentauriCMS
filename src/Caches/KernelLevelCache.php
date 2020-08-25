@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Caches;
+namespace Centauri\Caches;
 
 class KernelLevelCache
 {

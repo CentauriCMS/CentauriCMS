@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Exception;
+namespace Centauri\Exception;
 
 use Exception;
 use Illuminate\Http\Response;

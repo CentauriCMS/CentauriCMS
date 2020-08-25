@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\CMS\Helper;
+namespace Centauri\Helper;
 
-use Centauri\CMS\Centauri;
+use Centauri\Centauri;
 
 /**
  * This class is for including asset files such as .css / .js files which are versioned and using the "gulp-rev" npm-module.

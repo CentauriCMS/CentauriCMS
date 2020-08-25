@@ -1,12 +1,12 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Model\File;
-use Centauri\CMS\Model\FileReference;
+use Centauri\Centauri;
+use Centauri\Model\File;
+use Centauri\Model\FileReference;
 use \Illuminate\Http\Request;
-use Centauri\CMS\Traits\AjaxTrait;
-use Centauri\CMS\Utility\PathUtility;
+use Centauri\Traits\AjaxTrait;
+use Centauri\Utility\PathUtility;
 use Illuminate\Support\Facades\Storage;
 
 class ImageAjax

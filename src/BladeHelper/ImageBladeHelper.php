@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\BladeHelper;
+namespace Centauri\BladeHelper;
 
-use Centauri\CMS\Model\File;
-use Centauri\CMS\Model\FileReference;
+use Centauri\Model\File;
+use Centauri\Model\FileReference;
 
 class ImageBladeHelper
 {
@@ -23,7 +23,7 @@ class ImageBladeHelper
 
     public static function getPath($uid)
     {
-        $file = \Centauri\CMS\Model\File::where("uid", $uid)->get()->first();
+        $file = \Centauri\Model\File::where("uid", $uid)->get()->first();
         $file->relativePath = "/storage/Centauri/Filelist/" . $file->name;
 
         /*

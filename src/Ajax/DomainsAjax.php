@@ -1,12 +1,12 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
-use Centauri\CMS\Abstracts\AjaxAbstract;
+use Centauri\Abstracts\AjaxAbstract;
 use Illuminate\Http\Request;
-use Centauri\CMS\Model\Language;
-use Centauri\CMS\Model\Page;
-use Centauri\CMS\Traits\AjaxTrait;
-use Centauri\CMS\Utility\DomainsUtility;
+use Centauri\Model\Language;
+use Centauri\Model\Page;
+use Centauri\Traits\AjaxTrait;
+use Centauri\Utility\DomainsUtility;
 
 class DomainsAjax
 {

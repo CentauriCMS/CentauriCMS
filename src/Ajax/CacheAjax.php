@@ -1,11 +1,11 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Cache;
-use Centauri\CMS\Caches\StaticFileCache;
-use Centauri\CMS\Traits\AjaxTrait;
+use Centauri\Caches\StaticFileCache;
+use Centauri\Traits\AjaxTrait;
 
 class CacheAjax
 {

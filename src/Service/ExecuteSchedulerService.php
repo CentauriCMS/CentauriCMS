@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\CMS\Service;
+namespace Centauri\Service;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Model\Notification;
-use Centauri\CMS\Model\Scheduler;
+use Centauri\Centauri;
+use Centauri\Model\Notification;
+use Centauri\Model\Scheduler;
 use Illuminate\Support\Facades\Log;
 
 class ExecuteSchedulerService

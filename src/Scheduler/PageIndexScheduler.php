@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Scheduler;
+namespace Centauri\Scheduler;
 
 use Illuminate\Support\Facades\Log;
 

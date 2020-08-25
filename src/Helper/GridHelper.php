@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\CMS\Helper;
+namespace Centauri\Helper;
 
-use Centauri\CMS\Model\Element;
+use Centauri\Model\Element;
 
 class GridHelper
 {

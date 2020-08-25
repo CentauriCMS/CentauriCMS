@@ -1,15 +1,15 @@
 <?php
-namespace Centauri\CMS\Http;
+namespace Centauri\Http;
 
 use Exception;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Caches\StaticFileCache;
-use Centauri\CMS\Component\ElementComponent;
-use Centauri\CMS\Model\Page;
-use Centauri\CMS\Utility\DomainsUtility;
-use Centauri\CMS\Utility\FixerUtility;
+use Centauri\Centauri;
+use Centauri\Caches\StaticFileCache;
+use Centauri\Component\ElementComponent;
+use Centauri\Model\Page;
+use Centauri\Utility\DomainsUtility;
+use Centauri\Utility\FixerUtility;
 
 class Request
 {
@@ -50,7 +50,7 @@ class Request
         if($nodes == "centauri") {
             if(!is_null(request()->session()->get("CENTAURI_BE_USER"))) {
                 $Centauri->initBE();
-                $localizedArr = \Centauri\CMS\Service\Locales2JSService::getLocalizedArray();
+                $localizedArr = \Centauri\Service\Locales2JSService::getLocalizedArray();
 
                 return view("Centauri::Backend.centauri", [
                     "data" => [
@@ -112,7 +112,7 @@ class Request
 
                     $moduleid = $nnodes[1];
 
-                    $modulesService = Centauri::makeInstance(\Centauri\CMS\Service\ModulesService::class);
+                    $modulesService = Centauri::makeInstance(\Centauri\Service\ModulesService::class);
                     $modulesService->init();
                     $modules = $modulesService->findDataByModuleid($moduleid);
 
@@ -127,7 +127,7 @@ class Request
 
                     $title = trans("backend/modules.$moduleid.title");
 
-                    $data["localizedArr"] = \Centauri\CMS\Service\Locales2JSService::getLocalizedArray();
+                    $data["localizedArr"] = \Centauri\Service\Locales2JSService::getLocalizedArray();
                     $data["dashboard"] = $_GET["dashboard"] ?? "1";
                     $data["beuser"] = request()->session()->get("CENTAURI_BE_USER");
 

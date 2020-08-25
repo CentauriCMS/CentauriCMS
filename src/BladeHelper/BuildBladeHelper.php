@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\BladeHelper;
+namespace Centauri\BladeHelper;
 
-use Centauri\CMS\Model\Page;
-use Centauri\CMS\Utility\DomainsUtility;
+use Centauri\Model\Page;
+use Centauri\Utility\DomainsUtility;
 
 class BuildBladeHelper
 {
@@ -13,15 +13,15 @@ class BuildBladeHelper
     public static function initClasses($type)
     {
         if($type == "domains") {
-            self::$domainsUtility = \Centauri\CMS\Utility\DomainsUtility::class;
+            self::$domainsUtility = \Centauri\Utility\DomainsUtility::class;
         }
 
         if($type == "page") {
-            self::$pageBladeUtility = \Centauri\CMS\Utility\BladeUtility\PageBladeUtility::class;
+            self::$pageBladeUtility = \Centauri\Utility\BladeUtility\PageBladeUtility::class;
         }
 
         if($type == "link") {
-            self::$linkBladeUtility = \Centauri\CMS\Utility\BladeUtility\LinkBladeUtility::class;
+            self::$linkBladeUtility = \Centauri\Utility\BladeUtility\LinkBladeUtility::class;
         }
     }
 

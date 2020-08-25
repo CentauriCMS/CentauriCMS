@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\Http;
+namespace Centauri\Http;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Resolver\ViewResolver;
+use Centauri\Centauri;
+use Centauri\Resolver\ViewResolver;
 
 class FrontendRenderingHandler
 {

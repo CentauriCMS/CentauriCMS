@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Middleware;
+namespace Centauri\Middleware;
 
 use Closure;
 

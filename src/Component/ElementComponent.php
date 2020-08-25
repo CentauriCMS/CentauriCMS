@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\CMS\Component;
+namespace Centauri\Component;
 
-use Centauri\CMS\Centauri;
+use Centauri\Centauri;
 use Exception;
 
 class ElementComponent
@@ -31,7 +31,7 @@ class ElementComponent
             }
         }
 
-        $elements = \Centauri\CMS\Model\Element::where([
+        $elements = \Centauri\Model\Element::where([
             "pid" => $pageUid,
             "lid" => $lid,
             "hidden" => 0,
@@ -83,7 +83,7 @@ class ElementComponent
                                     $data = Centauri::makeInstance($className, $element);
                                 }
 
-                                $element = \Centauri\CMS\Processor\FieldProcessor::process($element, $data);
+                                $element = \Centauri\Processor\FieldProcessor::process($element, $data);
 
                                 $renderedHTML .= view($viewNamespace . "." . $ctype, [
                                     "element" => $element,

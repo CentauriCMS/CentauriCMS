@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\CMS\Utility;
+namespace Centauri\Utility;
 
-use Centauri\CMS\Model\Notification;
+use Centauri\Model\Notification;
 use Illuminate\Support\Facades\Log;
 
 class NotificationUtility

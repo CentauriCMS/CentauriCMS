@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Utility;
+namespace Centauri\Utility;
 
 class FileMimeTypeUtility
 {

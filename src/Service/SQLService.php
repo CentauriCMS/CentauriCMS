@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Service;
+namespace Centauri\Service;
 
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;

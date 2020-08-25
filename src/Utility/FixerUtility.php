@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\Utility;
+namespace Centauri\Utility;
 
-use Centauri\CMS\Model\Language;
-use Centauri\CMS\Model\Page;
+use Centauri\Model\Language;
+use Centauri\Model\Page;
 
 class FixerUtility
 {

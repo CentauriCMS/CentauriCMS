@@ -30,7 +30,7 @@
 
                 @if($file->cropable)
                     <div class="col-12 col-md-3 image-cropper-view p-0">
-                        <img src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::getPath($file->uid) !!}" class="img-fluid w-100 d-block ci-bs-1 p-3" />
+                        <img src="{!! Centauri\BladeHelper\ImageBladeHelper::getPath($file->uid) !!}" class="img-fluid w-100 d-block ci-bs-1 p-3" />
 
                         <button class="btn btn-success waves-effect waves-light w-100 mt-2 m-0">
                             Crop Image

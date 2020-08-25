@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\BladeHelper;
+namespace Centauri\BladeHelper;
 
 use Exception;
 

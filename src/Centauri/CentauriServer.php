@@ -1,8 +1,8 @@
 <?php
 namespace Centauri\CMS;
 
-use Centauri\CMS\CentauriServer\ExtensionsLoader;
-use Centauri\CMS\CentauriServer\KernelLevelCaching;
+use Centauri\CentauriServer\ExtensionsLoader;
+use Centauri\CentauriServer\KernelLevelCaching;
 
 class CentauriServer
 {

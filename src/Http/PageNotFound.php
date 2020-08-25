@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Http;
+namespace Centauri\Http;
 
 use Exception;
 

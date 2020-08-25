@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\CentauriServer;
+namespace Centauri\CentauriServer;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\CentauriServer;
+use Centauri\Centauri;
+use Centauri\CentauriServer;
 use Exception;
 
 class ExtensionsLoader extends CentauriServer

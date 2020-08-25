@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Abstracts;
+namespace Centauri\Abstracts;
 
 class AjaxAbstract
 {

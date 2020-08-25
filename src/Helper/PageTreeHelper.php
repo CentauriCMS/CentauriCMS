@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Helper;
+namespace Centauri\Helper;
 
 class PageTreeHelper
 {

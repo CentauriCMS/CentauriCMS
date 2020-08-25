@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\CMS\Application;
+namespace Centauri\Application;
 
-use \Centauri\CMS\AdditionalDatas;
+use \Centauri\AdditionalDatas;
 
 class CentauriApplication
 {
@@ -76,7 +76,7 @@ class CentauriApplication
 
             /** Handlers are only made for the purpose on HTTP-Request level "actions" */
             "Handlers" => [
-                "pageNotFound" => \Centauri\CMS\Http\PageNotFound::class,
+                "pageNotFound" => \Centauri\Http\PageNotFound::class,
 
                 /**
                  * Extendable by extensions and loaded (as also cached) by CentauriRoutes.php file

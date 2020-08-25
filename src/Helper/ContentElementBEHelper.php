@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\Helper;
+namespace Centauri\Helper;
 
-use Centauri\CMS\Ajax\ContentElementsAjax;
-use Centauri\CMS\Centauri;
+use Centauri\Ajax\ContentElementsAjax;
+use Centauri\Centauri;
 
 class ContentElementBEHelper
 {

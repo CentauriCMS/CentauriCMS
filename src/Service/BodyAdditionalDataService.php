@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Service;
+namespace Centauri\Service;
 
 class BodyAdditionalDataService
 {

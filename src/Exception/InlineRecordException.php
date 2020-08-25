@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Exception;
+namespace Centauri\Exception;
 
 class InlineRecordException extends \Exception
 {

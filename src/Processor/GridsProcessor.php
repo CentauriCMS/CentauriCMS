@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\CMS\Processor;
+namespace Centauri\Processor;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Component\ElementComponent;
-use Centauri\CMS\Helper\GridHelper;
+use Centauri\Centauri;
+use Centauri\Component\ElementComponent;
+use Centauri\Helper\GridHelper;
 use Exception;
 
 class GridsProcessor

@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\CMS\Event;
+namespace Centauri\Event;
 
-use Centauri\CMS\Model\Page;
+use Centauri\Model\Page;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Broadcasting\InteractsWithSockets;

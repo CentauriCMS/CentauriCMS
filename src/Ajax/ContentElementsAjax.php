@@ -1,15 +1,15 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Event\OnNewElementEvent;
-use Centauri\CMS\Exception\CentauriException;
-use Centauri\CMS\Helper\CCEHelper;
-use Centauri\CMS\Model\Element;
-use Centauri\CMS\Model\FileReference;
-use Centauri\CMS\Traits\AjaxTrait;
-use Centauri\CMS\Utility\DomainsUtility;
-use Centauri\CMS\Utility\ToastUtility;
+use Centauri\Centauri;
+use Centauri\Event\OnNewElementEvent;
+use Centauri\Exception\CentauriException;
+use Centauri\Helper\CCEHelper;
+use Centauri\Model\Element;
+use Centauri\Model\FileReference;
+use Centauri\Traits\AjaxTrait;
+use Centauri\Utility\DomainsUtility;
+use Centauri\Utility\ToastUtility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 
@@ -43,7 +43,7 @@ class ContentElementsAjax
         $rootpageid = $request->input("rootpageid") ?? null;
 
         // Getting Page and checking whether the host (domain-record) of this page exists at all
-        $page = \Centauri\CMS\Model\Page::where("uid", $uid)->get()->first();
+        $page = \Centauri\Model\Page::where("uid", $uid)->get()->first();
 
         $domainConfig = null;
 
@@ -787,7 +787,7 @@ class ContentElementsAjax
      * Helper-method for this class itself when rendering a single field - also used by $this->renderHtmlByField() method.
      * 
      * @param array $field The field-array which should get rendered.
-     * @param array|\Centauri\CMS\Model\Element $element Array or instance of the element object.
+     * @param array|\Centauri\Model\Element $element Array or instance of the element object.
      * @param string $parent The parent of the given field.
      * 
      * @return string|void

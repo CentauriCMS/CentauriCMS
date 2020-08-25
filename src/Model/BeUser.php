@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Model;
+namespace Centauri\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -55,7 +55,7 @@ class BeUser extends Model
     {
         return
             $this->hasMany(
-                \Centauri\CMS\Model\Role::class,
+                \Centauri\Model\Role::class,
                 "parent_uid",
                 "uid"
             )

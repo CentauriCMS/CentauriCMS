@@ -1,14 +1,14 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Event\OnNewElementEvent;
-use Centauri\CMS\Exception\InlineRecordException;
-use Centauri\CMS\Helper\CCEHelper;
-use Centauri\CMS\Helper\ModelsHelper;
-use Centauri\CMS\Model\Element;
-use Centauri\CMS\Model\File;
-use Centauri\CMS\Traits\AjaxTrait;
+use Centauri\Centauri;
+use Centauri\Event\OnNewElementEvent;
+use Centauri\Exception\InlineRecordException;
+use Centauri\Helper\CCEHelper;
+use Centauri\Helper\ModelsHelper;
+use Centauri\Model\Element;
+use Centauri\Model\File;
+use Centauri\Traits\AjaxTrait;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 

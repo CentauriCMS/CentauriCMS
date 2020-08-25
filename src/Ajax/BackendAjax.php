@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
 use Illuminate\Http\Request;
-use Centauri\CMS\Model\BeUser;
-use Centauri\CMS\Traits\AjaxTrait;
+use Centauri\Model\BeUser;
+use Centauri\Traits\AjaxTrait;
 
 /**
  * Backend Ajax class - handles login and Backend-specific settings for an User or similiar actions/stuff.
@@ -38,7 +38,7 @@ class BackendAjax
             $request->session()->put("CENTAURI_BE_USER", $user);
 
             // $Centauri->initBE();
-            $localizedArr = \Centauri\CMS\Service\Locales2JSService::getLocalizedArray();
+            $localizedArr = \Centauri\Service\Locales2JSService::getLocalizedArray();
 
             $html = view("Centauri::Backend.centauri", [
                 "data" => [

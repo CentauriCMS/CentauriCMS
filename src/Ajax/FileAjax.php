@@ -1,10 +1,10 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
-use Centauri\CMS\Abstracts\AjaxAbstract;
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Model\File;
-use Centauri\CMS\Traits\AjaxTrait;
+use Centauri\Abstracts\AjaxAbstract;
+use Centauri\Centauri;
+use Centauri\Model\File;
+use Centauri\Traits\AjaxTrait;
 use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 
@@ -23,7 +23,7 @@ class FileAjax
     public function request(Request $request, String $ajaxName)
     {
         if($ajaxName == "upload") {
-            $fileMimeTypeUtil = Centauri::makeInstance(\Centauri\CMS\Utility\FileMimeTypeUtility::class);
+            $fileMimeTypeUtil = Centauri::makeInstance(\Centauri\Utility\FileMimeTypeUtility::class);
 
             $file = $request->file;
             $name = $request->input("name");

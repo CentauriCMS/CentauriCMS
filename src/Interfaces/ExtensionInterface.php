@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Interfaces;
+namespace Centauri\Interfaces;
 
 interface ExtensionInterface
 {

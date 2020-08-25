@@ -1,11 +1,11 @@
 <?php
-namespace Centauri\CMS\Component;
+namespace Centauri\Component;
 
 use Exception;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Utility\NotificationUtility;
+use Centauri\Centauri;
+use Centauri\Utility\NotificationUtility;
 
 class ExtensionsComponent
 {

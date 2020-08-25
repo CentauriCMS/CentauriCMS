@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Processor;
+namespace Centauri\Processor;
 
 use Illuminate\Support\Str;
 

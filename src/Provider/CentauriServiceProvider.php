@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Provider;
+namespace Centauri\Provider;
 
 use Illuminate\Support\ServiceProvider;
 

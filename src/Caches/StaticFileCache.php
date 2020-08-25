@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\Caches;
+namespace Centauri\Caches;
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Utility\SeoUrlUtility;
+use Centauri\Centauri;
+use Centauri\Utility\SeoUrlUtility;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 

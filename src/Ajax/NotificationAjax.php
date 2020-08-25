@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\CMS\Ajax;
+namespace Centauri\Ajax;
 
-use Centauri\CMS\Model\Notification;
-use Centauri\CMS\Traits\AjaxTrait;
+use Centauri\Model\Notification;
+use Centauri\Traits\AjaxTrait;
 use Illuminate\Http\Request;
 
 class NotificationAjax

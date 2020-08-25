@@ -1,7 +1,7 @@
 <?php
 
-use Centauri\CMS\Centauri;
-use Centauri\CMS\Component\ExtensionsComponent;
+use Centauri\Centauri;
+use Centauri\Component\ExtensionsComponent;
 
 // Loading all extensions
 Centauri::makeInstance(ExtensionsComponent::class)->loadExtensions();

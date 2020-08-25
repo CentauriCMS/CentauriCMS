@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CMS\Resolver;
+namespace Centauri\Resolver;
 
 use Illuminate\Support\Facades\View;
 

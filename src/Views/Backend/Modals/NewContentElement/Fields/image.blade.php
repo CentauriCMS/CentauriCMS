@@ -7,7 +7,7 @@
         }
     }
 
-    $fileReferences = \Centauri\CMS\Model\FileReference::where("uid_element", $fieldConfig["uid"])->get()->all();
+    $fileReferences = \Centauri\Model\FileReference::where("uid_element", $fieldConfig["uid"])->get()->all();
 @endphp
 
 <div class="ci-field">
@@ -44,7 +44,7 @@
                 <div class="accordion mb-2">
                     <div class="top ci-bs-1">
                         <img 
-                            src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::getPath($fileReference->uid_image) !!}"
+                            src="{!! Centauri\BladeHelper\ImageBladeHelper::getPath($fileReference->uid_image) !!}"
                             class="img-fluid w-100"
                             data-uid="{{ $fileReference->uid }}"
                             data-data="{{ $fileReference->data }}"
@@ -60,7 +60,7 @@
                         <div class="row my-2">
                             <div class="col-12 col-lg-3 d-none">
                                 <img 
-                                    src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::getPath($fileReference->uid_image) !!}"
+                                    src="{!! Centauri\BladeHelper\ImageBladeHelper::getPath($fileReference->uid_image) !!}"
                                     class="img-fluid w-100 d-none"
                                     data-uid="{{ $fileReference->uid }}"
                                     data-data="{{ $fileReference->data }}"
