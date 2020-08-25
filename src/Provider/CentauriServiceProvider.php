@@ -51,8 +51,8 @@ class CentauriServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->make("Centauri\\CMS\\Controller\\BackendController");
-        $this->app->make("Centauri\\CMS\\Controller\\CentauriController");
+        $this->app->make("Centauri\\Controller\\BackendController");
+        $this->app->make("Centauri\\Controller\\CentauriController");
 
         $this->loadViewsFrom($this->getCentauriDir("Views"), "Centauri");
     }
