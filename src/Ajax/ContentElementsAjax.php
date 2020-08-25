@@ -1,15 +1,15 @@
 <?php
-namespace Centauri\Ajax;
+namespace Centauri\CMS\Ajax;
 
-use Centauri\Centauri;
-use Centauri\Event\OnNewElementEvent;
-use Centauri\Exception\CentauriException;
-use Centauri\Helper\CCEHelper;
-use Centauri\Model\Element;
-use Centauri\Model\FileReference;
-use Centauri\Traits\AjaxTrait;
-use Centauri\Utility\DomainsUtility;
-use Centauri\Utility\ToastUtility;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Event\OnNewElementEvent;
+use Centauri\CMS\Exception\CentauriException;
+use Centauri\CMS\Helper\CCEHelper;
+use Centauri\CMS\Model\Element;
+use Centauri\CMS\Model\FileReference;
+use Centauri\CMS\Traits\AjaxTrait;
+use Centauri\CMS\Utility\DomainsUtility;
+use Centauri\CMS\Utility\ToastUtility;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 

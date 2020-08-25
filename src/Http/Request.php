@@ -1,15 +1,15 @@
 <?php
-namespace Centauri\Http;
+namespace Centauri\CMS\Http;
 
 use Exception;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Str;
-use Centauri\Centauri;
-use Centauri\Caches\StaticFileCache;
-use Centauri\Component\ElementComponent;
-use Centauri\Model\Page;
-use Centauri\Utility\DomainsUtility;
-use Centauri\Utility\FixerUtility;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Caches\StaticFileCache;
+use Centauri\CMS\Component\ElementComponent;
+use Centauri\CMS\Model\Page;
+use Centauri\CMS\Utility\DomainsUtility;
+use Centauri\CMS\Utility\FixerUtility;
 
 class Request
 {

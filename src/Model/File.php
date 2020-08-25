@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Model;
+namespace Centauri\CMS\Model;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;

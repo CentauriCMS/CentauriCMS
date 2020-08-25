@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Helper;
+namespace Centauri\CMS\Helper;
 
-use Centauri\Centauri;
+use Centauri\CMS\Centauri;
 
 class GetModelBySlugHelper
 {

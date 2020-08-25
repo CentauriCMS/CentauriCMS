@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\AdditionalDatas;
+namespace Centauri\CMS\AdditionalDatas;
 
 class HeadTagAdditionalDatas
 {

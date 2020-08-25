@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Helper;
+namespace Centauri\CMS\Helper;
 
 class CCEHelper
 {

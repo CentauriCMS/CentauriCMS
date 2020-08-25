@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Interfaces;
+namespace Centauri\CMS\Interfaces;
 
 use Illuminate\Http\Request;
 

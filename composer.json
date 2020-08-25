@@ -49,7 +49,33 @@
 
     "autoload": {
         "psr-4": {
-            "Centauri\\": "src/"
+            "Centauri\\CMS\\": "src/Centauri/",
+            "Centauri\\CMS\\Abstracts\\": "src/Abstracts/",
+            "Centauri\\CMS\\AdditionalDatas\\": "src/AdditionalDatas/",
+            "Centauri\\CMS\\Ajax\\": "src/Ajax/",
+            "Centauri\\CMS\\Application\\": "src/Application/",
+            "Centauri\\CMS\\BladeHelper\\": "src/BladeHelper/",
+            "Centauri\\CMS\\Bootstrapping\\": "src/Bootstrapping/",
+            "Centauri\\CMS\\Caches\\": "src/Caches/",
+            "Centauri\\CMS\\Centauri\\": "src/Centauri/Centauri/",
+            "Centauri\\CMS\\CentauriServer\\": "src/CentauriServer/",
+            "Centauri\\CMS\\Component\\": "src/Component/",
+            "Centauri\\CMS\\Controller\\": "src/Controller/",
+            "Centauri\\CMS\\Event\\": "src/Event/",
+            "Centauri\\CMS\\Exception\\": "src/Exception/",
+            "Centauri\\CMS\\Helper\\": "src/Helper/",
+            "Centauri\\CMS\\Http\\": "src/Http/",
+            "Centauri\\CMS\\Interfaces\\": "src/Interfaces/",
+            "Centauri\\CMS\\Model\\": "src/Model/",
+            "Centauri\\CMS\\Processor\\": "src/Processor/",
+            "Centauri\\CMS\\Provider\\": "src/Provider/",
+            "Centauri\\CMS\\Resolver\\": "src/Resolver/",
+            "Centauri\\CMS\\Scheduler\\": "src/Scheduler/",
+            "Centauri\\CMS\\Service\\": "src/Service/",
+            "Centauri\\CMS\\Tracker\\": "src/Tracker/",
+            "Centauri\\CMS\\Traits\\": "src/Traits/",
+            "Centauri\\CMS\\Utility\\": "src/Utility/",
+            "Centauri\\CMS\\Validation\\": "src/Validation/"
         },
 
         "files": [

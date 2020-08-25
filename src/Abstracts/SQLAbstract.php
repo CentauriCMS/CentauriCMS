@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Abstracts;
+namespace Centauri\CMS\Abstracts;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;

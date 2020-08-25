@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Application;
+namespace Centauri\CMS\Application;
 
 use \Centauri\AdditionalDatas;
 

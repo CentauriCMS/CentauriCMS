@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\BladeHelper;
+namespace Centauri\CMS\BladeHelper;
 
-use Centauri\Model\File;
-use Centauri\Model\FileReference;
+use Centauri\CMS\Model\File;
+use Centauri\CMS\Model\FileReference;
 
 class ImageBladeHelper
 {

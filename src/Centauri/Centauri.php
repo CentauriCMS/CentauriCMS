@@ -1,31 +1,30 @@
 <?php
-namespace Centauri;
+namespace Centauri\CMS;
 
-use Centauri\Bootstrapping\CentauriBootstrapping;
-use Centauri\Component\ExtensionsComponent;
-use Centauri\Exception\CentauriException;
-use Centauri\Service\ModulesService;
-use Centauri\Service\PathService;
-use Centauri\Service\SchedulerService;
+use Centauri\CMS\Bootstrapping\CentauriBootstrapping;
+use Centauri\CMS\Component\ExtensionsComponent;
+use Centauri\CMS\Exception\CentauriException;
+use Centauri\CMS\Service\ModulesService;
+use Centauri\CMS\Service\PathService;
+use Centauri\CMS\Service\SchedulerService;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
-class Centauri extends ServiceProvider
+class Centauri
 {
     /**
      * Centauri Core version.
      * 
      * @var string $version
      */
-    protected static $version = "7.0";
+    protected static $version = "7.1";
 
     /**
      * Centauri Core state-version.
      * 
      * @var string $state
      */
-    protected static $state = "Early-Access";
+    protected static $state = "Stable";
 
     /**
      * Context of the application.

@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Helper;
+namespace Centauri\CMS\Helper;
 
-use Centauri\Model\Page;
+use Centauri\CMS\Model\Page;
 
 class PageHelper
 {

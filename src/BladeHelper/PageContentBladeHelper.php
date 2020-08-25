@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\BladeHelper;
+namespace Centauri\CMS\BladeHelper;
 
-use Centauri\Centauri;
-use Centauri\Component\ElementComponent;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Component\ElementComponent;
 
 /**
  * Renders a page by the given / its uid.

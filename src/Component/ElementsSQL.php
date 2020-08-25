@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\SQL;
+namespace Centauri\CMS\SQL;
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;

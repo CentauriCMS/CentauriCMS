@@ -1,5 +1,5 @@
 <?php
-namespace Centauri;
+namespace Centauri\CMS;
 
 class FrontendUser
 {

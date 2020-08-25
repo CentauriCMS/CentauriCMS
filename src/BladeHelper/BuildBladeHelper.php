@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\BladeHelper;
+namespace Centauri\CMS\BladeHelper;
 
-use Centauri\Model\Page;
-use Centauri\Utility\DomainsUtility;
+use Centauri\CMS\Model\Page;
+use Centauri\CMS\Utility\DomainsUtility;
 
 class BuildBladeHelper
 {

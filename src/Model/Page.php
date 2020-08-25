@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Model;
+namespace Centauri\CMS\Model;
 
-use Centauri\Utility\DomainsUtility;
+use Centauri\CMS\Utility\DomainsUtility;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 

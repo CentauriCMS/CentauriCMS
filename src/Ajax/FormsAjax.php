@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\Ajax;
+namespace Centauri\CMS\Ajax;
 
-use Centauri\Abstracts\AjaxAbstract;
-use Centauri\Interfaces\AjaxInterface;
-use Centauri\Model\Form;
+use Centauri\CMS\Abstracts\AjaxAbstract;
+use Centauri\CMS\Interfaces\AjaxInterface;
+use Centauri\CMS\Model\Form;
 use Illuminate\Http\Request;
 
 class FormsAjax implements AjaxInterface

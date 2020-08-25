@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Utility\BladeUtility;
+namespace Centauri\CMS\Utility\BladeUtility;
 
-use Centauri\Utility\DomainsUtility;
+use Centauri\CMS\Utility\DomainsUtility;
 
 class LinkBladeUtility
 {

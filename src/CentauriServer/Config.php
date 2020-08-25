@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\CentauriServer;
+namespace Centauri\CMS\CentauriServer;
 
 class Config
 {

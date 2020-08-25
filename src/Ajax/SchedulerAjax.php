@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\Ajax;
+namespace Centauri\CMS\Ajax;
 
-use Centauri\Model\Scheduler;
-use Centauri\Service\ExecuteSchedulerService;
-use Centauri\Traits\AjaxTrait;
+use Centauri\CMS\Model\Scheduler;
+use Centauri\CMS\Service\ExecuteSchedulerService;
+use Centauri\CMS\Traits\AjaxTrait;
 use Illuminate\Http\Request;
 
 class SchedulerAjax

@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\Utility;
+namespace Centauri\CMS\Utility;
 
-use Centauri\Model\Language;
-use Centauri\Model\Page;
+use Centauri\CMS\Model\Language;
+use Centauri\CMS\Model\Page;
 use Illuminate\Support\Facades\File;
 
 class DomainsUtility

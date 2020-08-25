@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Controller;
+namespace Centauri\CMS\Controller;
 
-use Centauri\Centauri;
+use Centauri\CMS\Centauri;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 

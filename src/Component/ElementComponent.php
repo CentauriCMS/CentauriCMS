@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Component;
+namespace Centauri\CMS\Component;
 
-use Centauri\Centauri;
+use Centauri\CMS\Centauri;
 use Exception;
 
 class ElementComponent

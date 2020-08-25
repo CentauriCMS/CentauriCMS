@@ -1,10 +1,10 @@
 <?php
-namespace Centauri\Ajax;
+namespace Centauri\CMS\Ajax;
 
-use Centauri\Centauri;
+use Centauri\CMS\Centauri;
 use Illuminate\Http\Request;
-use Centauri\Model\File;
-use Centauri\Traits\AjaxTrait;
+use Centauri\CMS\Model\File;
+use Centauri\CMS\Traits\AjaxTrait;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\ServiceProvider;

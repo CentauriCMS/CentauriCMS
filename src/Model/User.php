@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Model;
+namespace Centauri\CMS\Model;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;

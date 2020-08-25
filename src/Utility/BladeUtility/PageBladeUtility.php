@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Utility\BladeUtility;
+namespace Centauri\CMS\Utility\BladeUtility;
 
-use Centauri\Model\Page;
+use Centauri\CMS\Model\Page;
 
 class PageBladeUtility
 {

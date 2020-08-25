@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Service;
+namespace Centauri\CMS\Service;
 
 class ElementService
 {

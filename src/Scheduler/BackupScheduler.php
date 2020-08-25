@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Scheduler;
+namespace Centauri\CMS\Scheduler;
 
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Storage;

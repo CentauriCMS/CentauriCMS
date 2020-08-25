@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\Service;
+namespace Centauri\CMS\Service;
 
-use Centauri\BladeHelper;
-use Centauri\Helper;
+use Centauri\CMS\BladeHelper;
+use Centauri\CMS\Helper;
 
 class LoadBladeHelpersService
 {

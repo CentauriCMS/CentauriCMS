@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\Ajax;
+namespace Centauri\CMS\Ajax;
 
-use Centauri\Helper\ModelsHelper;
-use Centauri\Traits\AjaxTrait;
+use Centauri\CMS\Helper\ModelsHelper;
+use Centauri\CMS\Traits\AjaxTrait;
 use Illuminate\Http\Request;
 
 class ModelsAjax

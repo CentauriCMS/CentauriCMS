@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Abstracts;
+namespace Centauri\CMS\Abstracts;
 
 class ExtensionAbstract
 {

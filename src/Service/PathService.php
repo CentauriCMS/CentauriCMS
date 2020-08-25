@@ -1,8 +1,8 @@
 <?php
-namespace Centauri\Service;
+namespace Centauri\CMS\Service;
 
-use Centauri\Centauri;
-use Centauri\Utility\PathUtility;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Utility\PathUtility;
 
 class PathService
 {

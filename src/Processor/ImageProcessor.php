@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Processor;
+namespace Centauri\CMS\Processor;
 
-use Centauri\Model\FileReference;
+use Centauri\CMS\Model\FileReference;
 use Illuminate\Support\Str;
 
 class ImageProcessor

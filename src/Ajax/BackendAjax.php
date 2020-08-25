@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\Ajax;
+namespace Centauri\CMS\Ajax;
 
 use Illuminate\Http\Request;
-use Centauri\Model\BeUser;
-use Centauri\Traits\AjaxTrait;
+use Centauri\CMS\Model\BeUser;
+use Centauri\CMS\Traits\AjaxTrait;
 
 /**
  * Backend Ajax class - handles login and Backend-specific settings for an User or similiar actions/stuff.

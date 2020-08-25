@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\AdditionalDatas;
+namespace Centauri\CMS\AdditionalDatas;
 
-use Centauri\Ajax\ContentElementsAjax;
-use Centauri\Centauri;
-use Centauri\Helper\GridHelper;
+use Centauri\CMS\Ajax\ContentElementsAjax;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Helper\GridHelper;
 
 class GridAdditionalDatas
 {

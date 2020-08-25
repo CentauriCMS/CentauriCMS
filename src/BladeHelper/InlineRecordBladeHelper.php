@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\BladeHelper;
+namespace Centauri\CMS\BladeHelper;
 
 class InlineRecordBladeHelper
 {

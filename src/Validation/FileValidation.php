@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Validation;
+namespace Centauri\CMS\Validation;
 
 use Illuminate\Support\Str;
 

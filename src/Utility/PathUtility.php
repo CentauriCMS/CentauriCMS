@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Utility;
+namespace Centauri\CMS\Utility;
 
 class PathUtility
 {

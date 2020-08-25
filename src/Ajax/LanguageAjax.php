@@ -1,9 +1,9 @@
 <?php
-namespace Centauri\Ajax;
+namespace Centauri\CMS\Ajax;
 
 use Illuminate\Http\Request;
-use Centauri\Model\Language;
-use Centauri\Traits\AjaxTrait;
+use Centauri\CMS\Model\Language;
+use Centauri\CMS\Traits\AjaxTrait;
 
 class LanguageAjax
 {

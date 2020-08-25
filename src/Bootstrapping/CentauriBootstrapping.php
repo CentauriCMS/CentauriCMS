@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Bootstrapping;
+namespace Centauri\CMS\Bootstrapping;
 
-use Centauri\Centauri;
+use Centauri\CMS\Centauri;
 
 class CentauriBootstrapping
 {

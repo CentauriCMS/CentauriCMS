@@ -1,11 +1,11 @@
 <?php
-namespace Centauri\CentauriServer;
+namespace Centauri\CMS\CentauriServer;
 
-use Centauri\Caches\StaticFileCache;
-use Centauri\Centauri;
-use Centauri\CentauriServer;
-use Centauri\Utility\PathUtility;
-use Centauri\Utility\SeoUrlUtility;
+use Centauri\CMS\Caches\StaticFileCache;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\CentauriServer;
+use Centauri\CMS\Utility\PathUtility;
+use Centauri\CMS\Utility\SeoUrlUtility;
 use \Illuminate\Support\Str;
 
 /**

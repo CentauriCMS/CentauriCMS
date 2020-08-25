@@ -1,5 +1,5 @@
 <?php
-namespace Centauri\Controller;
+namespace Centauri\CMS\Controller;
 
 class CentauriController
 {

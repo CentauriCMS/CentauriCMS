@@ -1,18 +1,18 @@
 <?php
-namespace Centauri\Service;
+namespace Centauri\CMS\Service;
 
-use Centauri\BladeHelper\BuildBladeHelper;
-use Centauri\Centauri;
-use Centauri\Model\Page;
-use Centauri\Model\Language;
-use Centauri\Model\Notification;
-use Centauri\Component\ExtensionsComponent;
-use Centauri\Helper\PageTreeHelper;
-use Centauri\Model\BeUser;
-use Centauri\Model\File;
-use Centauri\Model\Form;
-use Centauri\Model\Scheduler;
-use Centauri\Utility\DomainsUtility;
+use Centauri\CMS\BladeHelper\BuildBladeHelper;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Model\Page;
+use Centauri\CMS\Model\Language;
+use Centauri\CMS\Model\Notification;
+use Centauri\CMS\Component\ExtensionsComponent;
+use Centauri\CMS\Helper\PageTreeHelper;
+use Centauri\CMS\Model\BeUser;
+use Centauri\CMS\Model\File;
+use Centauri\CMS\Model\Form;
+use Centauri\CMS\Model\Scheduler;
+use Centauri\CMS\Utility\DomainsUtility;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
 

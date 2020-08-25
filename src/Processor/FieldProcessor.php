@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\Processor;
+namespace Centauri\CMS\Processor;
 
-use Centauri\Helper\CCEHelper;
+use Centauri\CMS\Helper\CCEHelper;
 use Illuminate\Support\Str;
 
 class FieldProcessor

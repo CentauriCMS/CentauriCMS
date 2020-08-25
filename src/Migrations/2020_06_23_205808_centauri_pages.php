@@ -1,6 +1,6 @@
 <?php
 
-use Centauri\Model\Page;
+use Centauri\CMS\Model\Page;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
