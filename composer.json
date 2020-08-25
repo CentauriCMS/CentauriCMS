@@ -38,7 +38,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Centauri\\Provider\\CentauriServiceProvider"
+                "Centauri\\CMS\\Provider\\CentauriServiceProvider"
             ],
 
             "aliases": {
