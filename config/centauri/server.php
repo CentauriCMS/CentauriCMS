@@ -2,8 +2,8 @@
 
 return [
     "PATHS" => [
-        "centauri_storage" => realpath(__DIR__ . "/../storage/Centauri") . "/",
-        "centauri_storage_extensions" => realpath(__DIR__ . "/../storage/Centauri/Extensions") . "/"
+        "centauri_storage" => base_path("storage/Centauri") . "/",
+        "centauri_storage_extensions" => base_path("storage/Centauri/Extensions") . "/"
     ],
 
     "KERNEL_LEVEL_CACHING" => [

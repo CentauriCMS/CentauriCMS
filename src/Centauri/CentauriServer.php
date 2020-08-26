@@ -37,7 +37,7 @@ class CentauriServer
      */
     public function __construct()
     {
-        $this->config = require __DIR__ . "/../../config/centauri-server.php";
+        $this->config = require base_path("config/centauri/server.php");
     }
 
     /**

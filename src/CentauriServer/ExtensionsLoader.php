@@ -3,6 +3,7 @@ namespace Centauri\CMS\CentauriServer;
 
 use Centauri\CMS\Centauri;
 use Centauri\CMS\CentauriServer;
+use Centauri\CMS\Exception\CentauriException;
 use Exception;
 
 class ExtensionsLoader extends CentauriServer
@@ -40,7 +41,7 @@ class ExtensionsLoader extends CentauriServer
             $exists = file_exists($extConfigFilePath);
 
             if(!$exists) {
-                throw new Exception("Extension: '$extName' error - path: '$extConfigFilePath' configuration file for the extension itself is missing");
+                Centauri::throwStaticException("Extension: '$extName' error - path: '$extConfigFilePath' configuration file for the extension itself is missing");
             }
 
             $config = include $extConfigFilePath;
