@@ -12,8 +12,7 @@ class CentauriServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadMigrationsFrom($this->getCentauriDir("Migrations"));
-
+        // Configs
         $centauriConfigFiles = [
             "backend_layouts",
             "centauri",
@@ -33,11 +32,20 @@ class CentauriServiceProvider extends ServiceProvider
             ], "config");
         }
 
+
+        // Routes
+        $this->loadRoutesFrom($this->getCentauriDir("Http/CentauriRoutes.php"));
+
+
+        // Migrations
+        $this->loadMigrationsFrom($this->getCentauriDir("Migrations"));
+
         $this->publishes([
             $this->getCentauriDir("Migrations/") => database_path("migrations")
         ], "migrations");
 
-        /* VIEWS
+
+        /* Views
         $this->publishes([
             __DIR__.'/path/to/views' => resource_path('views/vendor/courier'),
         ]);
@@ -51,12 +59,12 @@ class CentauriServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        // Controllers
         // $this->app->make("Centauri\\CMS\\Controller\\BackendController");
         // $this->app->make("Centauri\\CMS\\Controller\\CentauriController");
 
+        // Views
         $this->loadViewsFrom($this->getCentauriDir("Views"), "Centauri");
-
-        $this->loadRoutesFrom($this->getCentauriDir("Http/CentauriRoutes.php"));
     }
 
     public function getCentauriDir($dir)
