@@ -26,9 +26,9 @@ class CentauriServiceProvider extends ServiceProvider
             "server"
         ];
 
-        foreach($centauriConfigFiles as $ccf) {
+        foreach($centauriConfigFiles as $config) {
             $this->publishes([
-                $this->getRootDir("config/centauri/$ccf.php") => config_path("$ccf.php")
+                $this->getRootDir("config/centauri/$config.php") => config_path("$config.php")
             ], "config");
         }
 
