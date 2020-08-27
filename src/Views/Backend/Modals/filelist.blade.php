@@ -28,7 +28,7 @@
 			<div class="item" data-uid="{{ $item->uid }}">
 				<div class="wrapper d-flex waves-effect ci-bs-1">
 					<div class="image-view col-4 px-0">
-						<img class="img-fluid" src="{!! Centauri\BladeHelper\ImageBladeHelper::getPath($item->uid) !!}" alt="" />
+						<img class="img-fluid" src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::getPath($item->uid) !!}" alt="" />
 					</div>
 
 					<div class="text-view col-8">

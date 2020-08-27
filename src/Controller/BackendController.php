@@ -23,7 +23,7 @@ class BackendController
 
     public function languageAction(Request $request)
     {
-        $URLParamsHelper = Centauri::makeInstance(\Centauri\Helper\ControllerURLParamsHelper::class, "Backend");
+        $URLParamsHelper = Centauri::makeInstance(\Centauri\CMS\Helper\ControllerURLParamsHelper::class, "Backend");
         $language = $URLParamsHelper->getParam("language");
 
         $request->session()->put("CENTAURI_LANGUAGE", $language);

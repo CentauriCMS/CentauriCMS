@@ -5,7 +5,7 @@
         </div>
 
         <div class="col-6">
-            {{ Centauri\Centauri::getApplicationContext() }}
+            {{ Centauri\CMS\Centauri::getApplicationContext() }}
         </div>
     </div>
 

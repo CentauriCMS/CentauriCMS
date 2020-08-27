@@ -55,7 +55,7 @@ class BeUser extends Model
     {
         return
             $this->hasMany(
-                \Centauri\Model\Role::class,
+                \Centauri\CMS\Model\Role::class,
                 "parent_uid",
                 "uid"
             )

@@ -23,7 +23,7 @@ class ImageBladeHelper
 
     public static function getPath($uid)
     {
-        $file = \Centauri\Model\File::where("uid", $uid)->get()->first();
+        $file = \Centauri\CMS\Model\File::where("uid", $uid)->get()->first();
         $file->relativePath = "/storage/Centauri/Filelist/" . $file->name;
 
         /*

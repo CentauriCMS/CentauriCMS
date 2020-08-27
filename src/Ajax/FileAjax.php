@@ -23,7 +23,7 @@ class FileAjax
     public function request(Request $request, String $ajaxName)
     {
         if($ajaxName == "upload") {
-            $fileMimeTypeUtil = Centauri::makeInstance(\Centauri\Utility\FileMimeTypeUtility::class);
+            $fileMimeTypeUtil = Centauri::makeInstance(\Centauri\CMS\Utility\FileMimeTypeUtility::class);
 
             $file = $request->file;
             $name = $request->input("name");
@@ -32,7 +32,7 @@ class FileAjax
             $fileExtension = $fileMimeTypeUtil->getExtByMimeType($mimeType);
 
             $file = $request->file->storeAs("public", "$name.$fileExtension");
-            rename(storage_path("app/$file"), storage_path("Centauri\\Filelist\\$name.$fileExtension"));
+            rename(storage_path("app/$file"), storage_path("Centauri/CMS/Filelist/$name.$fileExtension"));
 
             $fileModel = new File();
 
@@ -57,7 +57,7 @@ class FileAjax
             $file->name = $name;
 
             $file->save();
-            rename(storage_path("Centauri\\Filelist\\$oldName"), storage_path("Centauri\\Filelist\\$name"));
+            rename(storage_path("Centauri/CMS/Filelist/$oldName"), storage_path("Centauri/Filelist/$name"));
 
             return json_encode([
                 "type" => "success",
@@ -89,7 +89,7 @@ class FileAjax
             $fileModel->save();
 
             $image = $request->image->storeAs("public", $name);
-            rename(storage_path("app\\$image"), storage_path("Centauri\\Filelist\\$name"));
+            rename(storage_path("app/$image"), storage_path("Centauri/CMS/Filelist/$name"));
         }
 
         if($ajaxName == "delete") {

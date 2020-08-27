@@ -1,6 +1,5 @@
 <?php
 
-use Illuminate\Routing\Route;
 use Centauri\CMS\Centauri;
 use Centauri\CMS\Http\Request;
 use Centauri\CMS\Component\ExtensionsComponent;

@@ -13,15 +13,15 @@ class BuildBladeHelper
     public static function initClasses($type)
     {
         if($type == "domains") {
-            self::$domainsUtility = \Centauri\Utility\DomainsUtility::class;
+            self::$domainsUtility = \Centauri\CMS\Utility\DomainsUtility::class;
         }
 
         if($type == "page") {
-            self::$pageBladeUtility = \Centauri\Utility\BladeUtility\PageBladeUtility::class;
+            self::$pageBladeUtility = \Centauri\CMS\Utility\BladeUtility\PageBladeUtility::class;
         }
 
         if($type == "link") {
-            self::$linkBladeUtility = \Centauri\Utility\BladeUtility\LinkBladeUtility::class;
+            self::$linkBladeUtility = \Centauri\CMS\Utility\BladeUtility\LinkBladeUtility::class;
         }
     }
 

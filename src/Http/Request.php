@@ -50,7 +50,7 @@ class Request
         if($nodes == "centauri") {
             if(!is_null(request()->session()->get("CENTAURI_BE_USER"))) {
                 $Centauri->initBE();
-                $localizedArr = \Centauri\Service\Locales2JSService::getLocalizedArray();
+                $localizedArr = \Centauri\CMS\Service\Locales2JSService::getLocalizedArray();
 
                 return view("Centauri::Backend.centauri", [
                     "data" => [
@@ -79,7 +79,7 @@ class Request
                     $classname = $nnodes[2];
                     $method = $nnodes[3];
 
-                    $namespace = "\\Centauri\\CMS\\";
+                    $namespace = "\Centauri\CMS\\";
 
                     switch($nnodes[1]) {
                         case "ajax":
@@ -112,7 +112,7 @@ class Request
 
                     $moduleid = $nnodes[1];
 
-                    $modulesService = Centauri::makeInstance(\Centauri\Service\ModulesService::class);
+                    $modulesService = Centauri::makeInstance(\Centauri\CMS\Service\ModulesService::class);
                     $modulesService->init();
                     $modules = $modulesService->findDataByModuleid($moduleid);
 
@@ -127,7 +127,7 @@ class Request
 
                     $title = trans("backend/modules.$moduleid.title");
 
-                    $data["localizedArr"] = \Centauri\Service\Locales2JSService::getLocalizedArray();
+                    $data["localizedArr"] = \Centauri\CMS\Service\Locales2JSService::getLocalizedArray();
                     $data["dashboard"] = $_GET["dashboard"] ?? "1";
                     $data["beuser"] = request()->session()->get("CENTAURI_BE_USER");
 

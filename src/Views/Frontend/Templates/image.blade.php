@@ -17,11 +17,11 @@
         </picture>
 
     @elseif($type == "image")
-        <img class="img-fluid default" src="{!! \Centauri\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "default") !!}" />
-        <img class="img-fluid rounded desktop" src="{!! \Centauri\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "desktop") !!}" />
-        <img class="img-fluid rounded tablet-portrait" src="{!! \Centauri\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "tablet-portrait") !!}" />
-        <img class="img-fluid rounded tablet-landscape" src="{!! \Centauri\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "tablet-landscape") !!}" />
-        <img class="img-fluid rounded mobile" src="{!! \Centauri\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "mobile") !!}" />
+        <img class="img-fluid default" src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "default") !!}" />
+        <img class="img-fluid rounded desktop" src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "desktop") !!}" />
+        <img class="img-fluid rounded tablet-portrait" src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "tablet-portrait") !!}" />
+        <img class="img-fluid rounded tablet-landscape" src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "tablet-landscape") !!}" />
+        <img class="img-fluid rounded mobile" src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::findPathByView($fileReference, "mobile") !!}" />
 
     @endif
 @endif
@@ -39,5 +39,5 @@
 {{-- @images($fileReferences[0]) --}}
 
 {{-- <div class="image-view">
-    <img class="img-fluid" src="{!! Centauri\BladeHelper\ImageBladeHelper::getPath($element->image) !!}" />
+    <img class="img-fluid" src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::getPath($element->image) !!}" />
 </div> --}}

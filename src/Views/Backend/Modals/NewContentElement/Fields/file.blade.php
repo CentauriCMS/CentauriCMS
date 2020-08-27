@@ -37,11 +37,11 @@
             @foreach($splittedUids as $imgUid)
                 <div class="accordion p-3 ci-bs-1 mb-2">
                     <div class="top">
-                        {{ Centauri\BladeHelper\ImageBladeHelper::get($imgUid)->name ?? "" }}
+                        {{ Centauri\CMS\BladeHelper\ImageBladeHelper::get($imgUid)->name ?? "" }}
                     </div>
 
                     <div class="bottom" style="display:none;">
-                        <img src="{!! Centauri\BladeHelper\ImageBladeHelper::getPath($imgUid) !!}" class="img-fluid mr-2" />
+                        <img src="{!! Centauri\CMS\BladeHelper\ImageBladeHelper::getPath($imgUid) !!}" class="img-fluid mr-2" />
                     </div>
                 </div>
             @endforeach

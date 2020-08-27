@@ -1,7 +1,7 @@
 <?php
 namespace Centauri\CMS\AdditionalDatas;
 
-class PluginAdditionalDatas implements \Centauri\Interfaces\AdditionalDataInterface
+class PluginAdditionalDatas implements \Centauri\CMS\Interfaces\AdditionalDataInterface
 {
     public function fetch()
     {

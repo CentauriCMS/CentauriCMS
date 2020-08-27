@@ -53,7 +53,7 @@ class Role extends Model
     {
         return
             $this->hasMany(
-                \Centauri\Model\Permission::class,
+                \Centauri\CMS\Model\Permission::class,
                 "parent_uid",
                 "uid"
             )

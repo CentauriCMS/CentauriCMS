@@ -38,7 +38,7 @@ class BackendAjax
             $request->session()->put("CENTAURI_BE_USER", $user);
 
             // $Centauri->initBE();
-            $localizedArr = \Centauri\Service\Locales2JSService::getLocalizedArray();
+            $localizedArr = \Centauri\CMS\Service\Locales2JSService::getLocalizedArray();
 
             $html = view("Centauri::Backend.centauri", [
                 "data" => [

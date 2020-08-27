@@ -20,7 +20,7 @@
 
         {{-- <link rel="stylesheet" href="{{ asset(mix('public/backend/css/centauri.min.css')) }}"> --}}
 
-        <link rel="stylesheet" href="{{ \Centauri\Helper\GulpRevHelper::include(
+        <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
             "/public",
             "backend/css",
             "centauri.min.css"
@@ -44,7 +44,7 @@
                             </h2>
                         </div>
 
-                        <form class="col-12" action="{!! Centauri\BladeHelper\URIBladeHelper::action("Backend", "login") !!}" method="post">
+                        <form class="col-12" action="{!! Centauri\CMS\BladeHelper\URIBladeHelper::action("Backend", "login") !!}" method="post">
                             @csrf
 
                             <div class="ci-field">
@@ -78,7 +78,7 @@
 
         <script src="{{ asset('resources/js/centauri-env.js') }}" async defer></script>
 
-        <script src="{{ \Centauri\Helper\GulpRevHelper::include(
+        <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
             "/public",
             "backend/js",
             "centauri.min.js"

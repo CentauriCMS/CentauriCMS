@@ -43,7 +43,7 @@ class ContentElementsAjax
         $rootpageid = $request->input("rootpageid") ?? null;
 
         // Getting Page and checking whether the host (domain-record) of this page exists at all
-        $page = \Centauri\Model\Page::where("uid", $uid)->get()->first();
+        $page = \Centauri\CMS\Model\Page::where("uid", $uid)->get()->first();
 
         $domainConfig = null;
 
@@ -787,7 +787,7 @@ class ContentElementsAjax
      * Helper-method for this class itself when rendering a single field - also used by $this->renderHtmlByField() method.
      * 
      * @param array $field The field-array which should get rendered.
-     * @param array|\Centauri\Model\Element $element Array or instance of the element object.
+     * @param array|\Centauri\CMS\Model\Element $element Array or instance of the element object.
      * @param string $parent The parent of the given field.
      * 
      * @return string|void

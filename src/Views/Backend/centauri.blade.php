@@ -8,7 +8,7 @@
         <title>CentauriCMS » {{ isset($title) ? $title : "" }}</title>
 
         @if(!isset($data["LOGIN_AJAX"]))
-            <link rel="stylesheet" href="{{ \Centauri\Helper\GulpRevHelper::include(
+            <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
                 "/public",
                 "backend/css",
                 "centauri.min.css"
@@ -37,11 +37,11 @@
                             <br>
 
                             <small>
-                                v{{ Centauri\Centauri::getVersion() }}
+                                v{{ Centauri\CMS\Centauri::getVersion() }}
 
                                 <small>
                                     <i>
-                                        {{ Centauri\Centauri::getState() }}
+                                        {{ Centauri\CMS\Centauri::getState() }}
                                     </i>
                                 </small>
                             </small>
@@ -219,7 +219,7 @@
         {{-- <script src="{{ asset('public/backend/js/centauri.min.js') }}" async defer></script> --}}
 
         @if(!isset($data["LOGIN_AJAX"]))
-            <script src="{{ \Centauri\Helper\GulpRevHelper::include(
+            <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
                 "/public",
                 "backend/js",
                 "centauri.min.js"
