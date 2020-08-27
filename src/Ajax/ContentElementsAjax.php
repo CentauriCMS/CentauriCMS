@@ -209,7 +209,7 @@ class ContentElementsAjax
                     $html = $this->renderHtmlByField($field, [
                         "id" => $ctype,
                         "uid" => "",
-                        "additionalData" => $additionalData
+                        "additionalData" => []
                     ], "");
                 }
             }
