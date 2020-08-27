@@ -16,8 +16,8 @@ class CentauriServiceProvider extends ServiceProvider
         $centauriConfigFiles = [
             "backend_layouts",
             "centauri",
-            "config",
             "content_elements",
+            "core",
             "cropper",
             "forms",
             "grid_layouts",
