@@ -5,6 +5,7 @@
     "type": "project",
     "homepage": "https://centauricms.de/",
     "license": "proprietary",
+    "minimum-stability": "stable",
 
     "keywords": [
         "cms",
