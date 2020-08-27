@@ -111,7 +111,7 @@ class SchedulerAjax
      */
     public function getSchedulersAjax(Request $request)
     {
-        $cfgSchedulers = config("centauri")["Schedulers"];
+        $cfgSchedulers = centauriconfig("schedulers");
         $schedulers = [];
 
         foreach($cfgSchedulers as $label => $cfgScheduler) {

@@ -55,7 +55,7 @@ class StaticFileCache
     public static function setCache(string $id, string $data, bool $storeCachedFile = true, array $options = [])
     {
         if(
-            isset(config("centauri")["config"]["Caching"]["imagesToBase64"]) && (config("centauri")["config"]["Caching"]["imagesToBase64"]) ||
+            isset(centauriconfig("core")["Caching"]["imagesToBase64"]) && (centauriconfig("core")["Caching"]["imagesToBase64"]) ||
             isset($options["imagesToBase64"]) && ($options["imagesToBase64"])
         ) {
             $explDataLines = explode("\n", $data);

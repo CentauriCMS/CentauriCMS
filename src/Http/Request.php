@@ -203,7 +203,7 @@ class Request
         $renderedHTML = "";
 
         $customCacheCfg = false;
-        $cachingConfig = config("centauri")["config"]["Caching"];
+        $cachingConfig = centauriconfig("core")["Caching"];
         $cacheState = $cachingConfig["state"];
         $cachingType = $cachingConfig["type"] ?? null;
 
@@ -233,7 +233,7 @@ class Request
         }
 
         // Overwrites of beLayouts (if custom layouts has been defined, this rendering can manage how the HTML-output looks like)
-        $beLayout = config("centauri")["beLayouts"][$page->backend_layout] ?? null;
+        $beLayout = centauriconfig("backend_layouts")[$page->backend_layout] ?? null;
         $ElementComponent = Centauri::makeInstance(ElementComponent::class);
 
         define("CENTAURI_END", microtime(true));
@@ -241,7 +241,7 @@ class Request
         if($renderedHTML != "") {
             $renderedHTML = "";
 
-            if(!isset(config("centauri")["beLayouts"][$page->backend_layout]) || is_null($beLayout)) {
+            if(!isset(centauriconfig("backend_layouts")[$page->backend_layout]) || is_null($beLayout)) {
                 if(Centauri::isLocal()) {
                     throw new Exception("The BE-Layout '" . $page->backend_layout . "' for this page has no configuration yet!");
                 }
@@ -266,7 +266,7 @@ class Request
         $frontendHtml = FrontendRenderingHandler::getPreparedFrontendHtml($page, $renderedHTML, $additionalHeadTagContent, $additionalBodyTagContent);
 
         // Caching only if it's set in Centauri's config array (which gets by default cached from Laravel)
-        if(isset(config("centauri")["config"]["Caching"]) && (config("centauri")["config"]["Caching"])) {
+        if(isset(centauriconfig("core")["Caching"]) && (centauriconfig("core")["Caching"])) {
             // Caching before returning the outputted frontend html for 24 hours (86400 seconds)
             if($renderedHTML != "" && $cacheState) {
                 if(!$customCacheCfg) {

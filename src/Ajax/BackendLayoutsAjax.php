@@ -17,7 +17,7 @@ class BackendLayoutsAjax
      */
     public function findAllAjax(Request $request)
     {
-        $beLayouts = config("centauri")["beLayouts"];
+        $beLayouts = centauriconfig("backend_layouts");
         $layouts = [];
 
         foreach($beLayouts as $key => $beLayout) {

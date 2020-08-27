@@ -75,10 +75,10 @@ class ContentElementsAjax
             "lid" => $lid
         ])->orderBy("sorting", "asc")->get()->all();
 
-        $CCE = config("centauri")["CCE"];
+        $CCE = centauriconfig("content_elements");
         $fields = CCEHelper::getAllFields();
 
-        $backendLayout = config("centauri")["beLayouts"][$page->getAttribute("backend_layout")] ?? null;
+        $backendLayout = centauriconfig("backend_layouts")[$page->getAttribute("backend_layout")] ?? null;
 
         if(is_null($backendLayout)) {
             return response("Backend-Layout '" . $page->getAttribute("backend_layout") . "' not found for page with ID: " . $page->getAttribute("uid"), 500);
@@ -86,7 +86,7 @@ class ContentElementsAjax
 
         foreach($elements as $element) {
             if($element->ctype == "grids") {
-                $gridConfig = config("centauri")["gridLayouts"][$element->grid] ?? null;
+                $gridConfig = centauriconfig("grid_layouts")[$element->grid] ?? null;
 
                 if(!is_null($gridConfig)) {
                     $element->customTitle = $element->ctype . $gridConfig["label"];
@@ -114,7 +114,7 @@ class ContentElementsAjax
     public function getConfigCCEAjax(Request $request)
     {
         $ExtContentElements = $GLOBALS["Centauri"]["ContentElements"];
-        $GLOBALS["Centauri"]["ContentElements"] = config("centauri")["CCE"];
+        $GLOBALS["Centauri"]["ContentElements"] = centauriconfig("content_elements");
 
         foreach($ExtContentElements as $key => $extCE) {
             $order = isset($extCE["order"]) ? $extCE["order"] : "default";
@@ -295,7 +295,7 @@ class ContentElementsAjax
         $datasArr = json_decode($datas, true);
         $tableInfo = $request->input("tableInfo");
 
-        $CCEfields = config("centauri")["CCE"]["fields"];
+        $CCEfields = centauriconfig("content_elements")["fields"];
 
         $model = null;
 
@@ -359,7 +359,7 @@ class ContentElementsAjax
         $element = Element::where("uid", $uid)->get()->first();
         $ctype = $element->ctype;
 
-        $CCE = config("centauri")["CCE"];
+        $CCE = centauriconfig("content_elements");
         $elements = $CCE["elements"];
 
         $elementShowsFields = $elements[$ctype] ?? null;

@@ -59,7 +59,7 @@
                 </div> --}}
 
                 <div class="accordions">
-                    @foreach(config("centauri")["Cropper"]["items"] as $item)
+                    @foreach(centauriconfig("cropper")["items"] as $item)
                         <div class="accordion my-3">
                             <div class="top">
                                 {{ $item["label"] }}

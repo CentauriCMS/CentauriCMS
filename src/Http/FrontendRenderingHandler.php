@@ -63,9 +63,9 @@ class FrontendRenderingHandler
 
         $frontendTemplate = "Centauri::Frontend";
 
-        if(is_array(config("centauri")["config"]["FE"])) {
-            if(isset(config("centauri")["config"]["FE"]["DefaultMainTemplate"])) {
-                $frontendTemplate = config("centauri")["config"]["FE"]["DefaultMainTemplate"];
+        if(is_array(centauriconfig("core")["FE"])) {
+            if(isset(centauriconfig("core")["FE"]["DefaultMainTemplate"])) {
+                $frontendTemplate = centauriconfig("core")["FE"]["DefaultMainTemplate"];
             }
         }
 

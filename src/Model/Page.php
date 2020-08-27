@@ -85,6 +85,6 @@ class Page extends Model
 
     public function getBackendLayoutConfig()
     {
-        return config("centauri")["beLayouts"][$this->backend_layout] ?? null;
+        return centauriconfig("backend_layouts")[$this->backend_layout] ?? null;
     }
 }

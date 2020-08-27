@@ -13,7 +13,7 @@ class ModelsHelper
      */
     public static function getAllCMEs()
     {
-        $CME = config("centauri")["CME"];
+        $CME = centauriconfig("model_elements");
         $models = $CME["models"];
 
         foreach($models as $key => $model) {

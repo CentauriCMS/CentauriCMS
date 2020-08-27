@@ -53,7 +53,7 @@ class ElementComponent
     {
         $renderedHTML = "";
 
-        $CCEelements = config("centauri")["CCE"]["elements"];
+        $CCEelements = centauriconfig("content_elements")["elements"];
 
         foreach($GLOBALS["Centauri"]["Extensions"] ?? [] as $extension => $exArr) {
             if(isset($exArr["config"])) {

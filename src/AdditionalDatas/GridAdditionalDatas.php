@@ -14,7 +14,7 @@ class GridAdditionalDatas
      */
     public function fetch()
     {
-        $gridLayouts = config("centauri")["gridLayouts"];
+        $gridLayouts = centauriconfig("grid_layouts");
 
         return [
             "grids" => [
@@ -52,7 +52,7 @@ class GridAdditionalDatas
         $gridConfig = null;
 
         if(!is_null($gridelement->grid)) {
-            $gridConfig = config("centauri")["gridLayouts"][$gridelement->grid] ?? null;
+            $gridConfig = centauriconfig("grid_layouts")[$gridelement->grid] ?? null;
         } else {
             return Centauri::throwStaticException("Grid-Layout '" . $gridelement->grid . "' not found for Grid with UID: " . $gridUid . " in Grid-Layouts configuration");
         }
@@ -91,7 +91,7 @@ class GridAdditionalDatas
         $gridConfig = null;
 
         if(!is_null($gridelement->grid)) {
-            $gridConfig = config("centauri")["gridLayouts"][$gridelement->grid] ?? null;
+            $gridConfig = centauriconfig("grid_layouts")[$gridelement->grid] ?? null;
         } else {
             return Centauri::throwStaticException("Grid-Layout '" . $gridelement->grid . "' not found for Grid with UID: " . $gridUid . " in Grid-Layouts configuration");
         }
@@ -119,7 +119,7 @@ class GridAdditionalDatas
         $gridConfig = null;
 
         if(!is_null($gridelement->grid)) {
-            $gridConfig = config("centauri")["gridLayouts"][$gridelement->grid] ?? null;
+            $gridConfig = centauriconfig("grid_layouts")[$gridelement->grid] ?? null;
         } else {
             return Centauri::throwStaticException("Grid-Layout '" . $gridelement->grid . "' not found for Grid with UID: " . $gridUid . " in Grid-Layouts configuration");
         }

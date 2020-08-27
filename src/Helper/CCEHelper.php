@@ -5,7 +5,7 @@ class CCEHelper
 {
     public static function getAllFields()
     {
-        $CCE = config("centauri")["CCE"];
+        $CCE = centauriconfig("content_elements");
         $CCEfields = $CCE["fields"];
 
         $_fields = [];
@@ -29,7 +29,7 @@ class CCEHelper
 
     public static function getAllElements()
     {
-        $CCE = config("centauri")["CCE"];
+        $CCE = centauriconfig("content_elements");
         $CEEelements = $CCE["elements"];
 
         $_elements = [];

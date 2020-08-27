@@ -49,7 +49,7 @@ class ModelsAjax
             }
         }
 
-        $CME = config("centauri")["CME"];
+        $CME = centauriconfig("model_elements");
         $extensionsCME = $GLOBALS["Centauri"]["Models"];
 
         foreach($extensionsCME as $extModelKey => $extModel) {

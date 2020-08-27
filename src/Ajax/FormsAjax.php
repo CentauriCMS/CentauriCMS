@@ -28,7 +28,7 @@ class FormsAjax implements AjaxInterface
             $uid = $request->input("uid");
             $form = Form::where("uid", $uid)->get()->first();
 
-            $tabs = config("centauri")["forms"]["tabs"];
+            $tabs = centauriconfig("forms")["tabs"];
             $data = [
                 "tabs" => $tabs
             ];

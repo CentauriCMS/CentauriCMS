@@ -224,7 +224,7 @@ class Centauri
      */
     public static function keepSiteAlive()
     {
-        $keepSiteAlive = config("centauri")["config"]["FE"]["keepSiteAlive"] ?? null;
+        $keepSiteAlive = centauriconfig("core")["FE"]["keepSiteAlive"] ?? null;
 
         if(!is_null($keepSiteAlive)) {
             return $keepSiteAlive;

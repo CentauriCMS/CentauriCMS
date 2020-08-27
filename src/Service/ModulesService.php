@@ -236,7 +236,7 @@ class ModulesService
                 "forms" => $forms
             ];
 
-            // $tabs = config("centauri")["forms"]["tabs"];
+            // $tabs = centauriconfig("forms")["tabs"];
 
             // $data = [
             //     "tabs" => $tabs

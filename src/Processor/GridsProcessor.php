@@ -21,7 +21,7 @@ class GridsProcessor
         $renderedColsHTML = [];
 
         $value = $data["value"];
-        $gridLayout = config("centauri")["gridLayouts"][$value] ?? null;
+        $gridLayout = centauriconfig("grid_layouts")[$value] ?? null;
 
         if(is_null($gridLayout)) {
             throw new Exception("Grid-Layout '" . $value . "' not found!");
