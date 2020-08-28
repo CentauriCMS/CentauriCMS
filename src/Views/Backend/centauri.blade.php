@@ -39,11 +39,13 @@
                             <small>
                                 v{{ Centauri\CMS\Centauri::getVersion() }}
 
-                                <small>
-                                    <i>
-                                        {{ Centauri\CMS\Centauri::getState() }}
-                                    </i>
-                                </small>
+                                @if(Centauri\CMS\Centauri::getState() != "Stable")
+                                    <small>
+                                        <i>
+                                            {{ Centauri\CMS\Centauri::getState() }}
+                                        </i>
+                                    </small>
+                                @endif
                             </small>
                         </h4>
                     </div>
