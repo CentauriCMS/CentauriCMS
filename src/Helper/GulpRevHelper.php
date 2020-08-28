@@ -20,7 +20,13 @@ class GulpRevHelper
      */
     public static function include($path, $subdir, $name, $manifestFileName = "rev-manifest.json")
     {
-        $manifestFilePath = __DIR__ . "/../.." . $path . "/" . $manifestFileName;
+        if($path[0] == "/") {
+            $path = substr($path, 1, strlen($path));
+        }
+
+        $manifestFilePath = base_path("$path/$manifestFileName");
+
+        $path = "/$path";
 
         if(!file_exists($manifestFilePath)) {
             return "$path/$subdir/$name";
