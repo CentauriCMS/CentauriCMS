@@ -227,7 +227,7 @@
                 "centauri.min.js"
             ) }}" async defer></script>
 
-            <script src="{{ asset('resources/js/centauri-env.js') }}" async defer></script>
+            <script src="/resources/js/centauri-env.js" async defer></script>
         @endif
 
         <script>

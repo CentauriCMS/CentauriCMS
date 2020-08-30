@@ -113,7 +113,7 @@ class DomainsAjax
         $data = $request->input("data");
         $datasArr = json_decode($data, true);
 
-        $id = strtolower($request->input("id"));
+        $id = $request->input("id");
 
         $path = storage_path("Centauri/Domains/$id.json");
         $content = json_decode(file_get_contents($path));
