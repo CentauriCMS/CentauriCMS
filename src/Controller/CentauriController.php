@@ -11,6 +11,7 @@ class CentauriController
     public function getShortName()
     {
         $path = explode("\\", static::class);
+
         return array_pop($path);
     }
 }

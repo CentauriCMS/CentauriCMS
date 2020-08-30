@@ -7,6 +7,7 @@ use Illuminate\Support\Str;
 use Centauri\CMS\Centauri;
 use Centauri\CMS\Caches\StaticFileCache;
 use Centauri\CMS\Component\ElementComponent;
+use Centauri\CMS\Controller\InstallationController;
 use Centauri\CMS\Model\Page;
 use Centauri\CMS\Utility\DomainsUtility;
 use Centauri\CMS\Utility\FixerUtility;
@@ -42,6 +43,52 @@ class Request
         }
 
         if(is_null($domain)) {
+            if(Str::contains($nodes, "centauri/install")) {
+                if(Str::contains($nodes, "centauri/install/action")) {
+                    $action = explode("/", $nodes)[3] ?? "";
+
+                    if($action == "") {
+                        return redirect("/centauri/install");
+                    }
+
+                    $installationController = Centauri::makeInstance(InstallationController::class);
+
+                    return call_user_func(
+                        [
+                            $installationController,
+                            $action . "Action"
+                        ]
+                    );
+                }
+
+                if(Str::contains($nodes, "centauri/install/step/")) {
+                    $step = explode("/", $nodes)[3];
+
+                    $stepType = "";
+                    $_stepType = "";
+
+                    if($step == 2) {
+                        $_stepType = "Domain Configuration";
+                    }
+                    if($step == 3) {
+                        $_stepType = "Domain Confirmation";
+                    }
+
+                    if($_stepType != "") {
+                        $stepType = " - " . $_stepType;
+                    }
+
+                    return view("Centauri::Backend.Installation.step-$step", [
+                        "step" => $step,
+                        "stepType" => $stepType
+                    ]);
+                }
+
+                return view("Centauri::Backend.installation", [
+                    "step" => 0
+                ]);
+            }
+
             throw new Exception("The requested domain could not be resolved");
         }
 
@@ -106,6 +153,7 @@ class Request
                 } else {
                     if($nnodes[1] == "fix") {
                         $fixID = $nnodes[2];
+
                         $FixerUtility = Centauri::makeInstance(FixerUtility::class);
                         return $FixerUtility->fix($fixID);
                     }

@@ -82,7 +82,7 @@ class DomainsAjax
     {
         $id = $request->input("id");
 
-        $path = storage_path("Centauri/Domains/" . strtolower($id) . ".json");
+        $path = storage_path("Centauri/Domains/" . $id . ".json");
         $content = file_get_contents($path);
 
         return $content;
