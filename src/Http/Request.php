@@ -43,7 +43,7 @@ class Request
         }
 
         if(is_null($domain)) {
-            if(Str::contains($nodes, "centauri/install")) {
+            if(!empty($nodes) && Str::contains($nodes, "centauri/install")) {
                 if(Str::contains($nodes, "centauri/install/action")) {
                     $action = explode("/", $nodes)[3] ?? "";
 
@@ -83,13 +83,11 @@ class Request
                         "stepType" => $stepType
                     ]);
                 }
-
-                return view("Centauri::Backend.installation", [
-                    "step" => 0
-                ]);
             }
 
-            throw new Exception("The requested domain could not be resolved");
+            return view("Centauri::Backend.installation", [
+                "step" => 0
+            ]);
         }
 
         $domainConfigJSON = json_decode(file_get_contents($domain));

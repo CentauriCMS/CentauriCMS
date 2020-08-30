@@ -14,7 +14,7 @@
         ) }}">
     </head>
 
-    <body>
+    <body class="centauri-installation">
         <section id="header">
             <div class="container-fluid sticked h-100">
                 <div class="nav-wrapper justify-content-space-between h-100-childs flex-centration-childs flex-ai-center-childs p-3">
