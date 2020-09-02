@@ -17,7 +17,7 @@ class CCEHelper
             }
         }
 
-        $extensionsCME = $GLOBALS["Centauri"]["Models"];
+        $extensionsCME = $GLOBALS["Centauri"]["Models"] ?? [];
 
         foreach($extensionsCME as $key => $extCMEArr) {
             $_fields[$extCMEArr["namespace"]] = $extCMEArr;

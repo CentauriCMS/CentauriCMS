@@ -43,51 +43,55 @@ class Request
         }
 
         if(is_null($domain)) {
-            if(!empty($nodes) && Str::contains($nodes, "centauri/install")) {
-                if(Str::contains($nodes, "centauri/install/action")) {
-                    $action = explode("/", $nodes)[3] ?? "";
+            if(!empty($nodes)) {
+                if(Str::contains($nodes, "centauri/install")) {
+                    if(Str::contains($nodes, "centauri/install/action")) {
+                        $action = explode("/", $nodes)[3] ?? "";
 
-                    if($action == "") {
-                        return redirect("/centauri/install");
+                        if($action == "") {
+                            return redirect("/centauri/install");
+                        }
+
+                        $installationController = Centauri::makeInstance(InstallationController::class);
+
+                        return call_user_func(
+                            [
+                                $installationController,
+                                $action . "Action"
+                            ]
+                        );
                     }
 
-                    $installationController = Centauri::makeInstance(InstallationController::class);
+                    if(Str::contains($nodes, "centauri/install/step/")) {
+                        $step = explode("/", $nodes)[3];
 
-                    return call_user_func(
-                        [
-                            $installationController,
-                            $action . "Action"
-                        ]
-                    );
-                }
+                        $stepType = "";
+                        $_stepType = "";
 
-                if(Str::contains($nodes, "centauri/install/step/")) {
-                    $step = explode("/", $nodes)[3];
+                        if($step == 2) {
+                            $_stepType = "Domain Configuration";
+                        }
+                        if($step == 3) {
+                            $_stepType = "Domain Confirmation";
+                        }
 
-                    $stepType = "";
-                    $_stepType = "";
+                        if($_stepType != "") {
+                            $stepType = " - " . $_stepType;
+                        }
 
-                    if($step == 2) {
-                        $_stepType = "Domain Configuration";
-                    }
-                    if($step == 3) {
-                        $_stepType = "Domain Confirmation";
-                    }
-
-                    if($_stepType != "") {
-                        $stepType = " - " . $_stepType;
+                        return view("Centauri::Backend.Installation.step-$step", [
+                            "step" => $step,
+                            "stepType" => $stepType
+                        ]);
                     }
 
-                    return view("Centauri::Backend.Installation.step-$step", [
-                        "step" => $step,
-                        "stepType" => $stepType
+                    return view("Centauri::Backend.installation", [
+                        "step" => 0
                     ]);
                 }
             }
 
-            return view("Centauri::Backend.installation", [
-                "step" => 0
-            ]);
+            throw new Exception("The requested domain could not be resolved");
         }
 
         $domainConfigJSON = json_decode(file_get_contents($domain));

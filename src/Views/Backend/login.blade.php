@@ -18,7 +18,10 @@
             }
         </style>
 
+        {{-- <link rel="stylesheet" href="{{ asset(mix('public/backend/css/centauri.min.css')) }}"> --}}
+
         <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+            "/public",
             "backend/css",
             "centauri.min.css"
         ) }}">
@@ -73,9 +76,10 @@
             </div>
         </div>
 
-        <script src="{{ asset('resources/js/centauri-env.js') }}" async defer></script>
+        <script src="/resources/js/centauri-env.js" async defer></script>
 
         <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+            "/public",
             "backend/js",
             "centauri.min.js"
         ) }}" async defer></script>

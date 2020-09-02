@@ -1,6 +1,8 @@
 <?php
 namespace Centauri\CMS\BladeHelper;
 
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Utility\PathUtility;
 use Exception;
 
 /**
@@ -61,5 +63,12 @@ class URIBladeHelper
             $instance,
             $action
         ], $parameters);
+    }
+
+    public static function link($uri)
+    {
+        $pathUtility = Centauri::makeInstance(PathUtility::class);
+
+        return $pathUtility::getAbsURL($uri);
     }
 }

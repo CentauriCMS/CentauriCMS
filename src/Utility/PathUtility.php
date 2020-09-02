@@ -5,7 +5,7 @@ class PathUtility
 {
     public function getBaseURL($needles = "")
     {
-        $baseURL = env("APP_URL");
+        $baseURL = config("app")["url"];
 
         if(mb_substr($baseURL, -1) != "/") {
             $baseURL .= "/";
@@ -29,7 +29,7 @@ class PathUtility
             $path[0] = "";
         }
 
-        return config("app")["url"] . ($path != "" ? "/" . $path : "");
+        return config("app")["url"] . $path;
     }
 
     public static function getRequestedURL()

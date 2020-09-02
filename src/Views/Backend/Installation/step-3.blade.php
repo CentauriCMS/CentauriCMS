@@ -67,13 +67,13 @@
 
     <div class="row">
         <div class="col">
-            <a role="button" href="/centauri/install/step/2" class="btn btn-info waves-effect waves-light">
+            <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/step/2") !!}" class="btn btn-info waves-effect waves-light">
                 Step 2
             </a>
         </div>
 
         <div class="col text-right">
-            <a role="button" href="/centauri/install/action/finish" class="btn btn-primary waves-effect waves-light">
+            <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/action/finish") !!}" class="btn btn-primary waves-effect waves-light">
                 Finish
             </a>
         </div>

@@ -8,7 +8,7 @@
 @extends("Centauri::Backend.installation")
 
 @section("content")
-    <form method="POST" action="/centauri/install/action/domain">
+    <form method="POST" action="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/action/domain") !!}">
         <div class="row">
             <div class="col-12 col-lg-7 form-col">
                 <h4 class="mb-2 font-fatfrank">
@@ -133,13 +133,13 @@
 
         <div class="row">
             <div class="col">
-                <a role="button" href="/centauri/install" class="btn btn-info waves-effect waves-light">
+                <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install") !!}" class="btn btn-info waves-effect waves-light">
                     Step 1
                 </a>
             </div>
 
             <div class="col text-right">
-                <button type="submit" href="/centauri/install/step/3" class="btn btn-primary waves-effect waves-light">
+                <button type="submit" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/step/3") !!}" class="btn btn-primary waves-effect waves-light">
                     Step 3
                 </button>
             </div>

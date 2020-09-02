@@ -43,25 +43,25 @@
     <div class="row">
         @if($status == "MAIN_CONFIG_EXISTS")
             <div class="col">
-                <a role="button" href="/centauri/install/step/2" class="btn btn-danger waves-effect waves-light">
+                <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/step/2") !!}" class="btn btn-danger waves-effect waves-light">
                     Back to Step 2
                 </a>
             </div>
 
             <div class="col text-right">
-                <a role="button" href="/centauri/install/action/overwriteFinish" class="btn btn-warning waves-effect waves-light">
+                <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/action/overwriteFinish") !!}" class="btn btn-warning waves-effect waves-light">
                     Overwrite
                 </a>
             </div>
         @elseif($status == "SUCCESS")
             <div class="col">
-                <a role="button" href="/" class="btn btn-primary waves-effect waves-light">
+                <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/") !!}" class="btn btn-primary waves-effect waves-light">
                     Frontend
                 </a>
             </div>
 
             <div class="col text-right">
-                <a role="button" href="/centauri/" class="btn btn-primary waves-effect waves-light">
+                <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/") !!}" class="btn btn-primary waves-effect waves-light">
                     Backend
                 </a>
             </div>

@@ -9,6 +9,7 @@
 
         @if(!isset($data["LOGIN_AJAX"]))
             <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+                "/public",
                 "backend/css",
                 "centauri.min.css"
             ) }}">
@@ -217,8 +218,11 @@
             </div>
         </div>
 
+        {{-- <script src="{{ asset('public/backend/js/centauri.min.js') }}" async defer></script> --}}
+
         @if(!isset($data["LOGIN_AJAX"]))
             <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+                "/public",
                 "backend/js",
                 "centauri.min.js"
             ) }}" async defer></script>

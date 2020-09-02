@@ -22,7 +22,7 @@ class InstallationController extends CentauriController
             "ssl" => $ssl
         ]);
 
-        return redirect("/centauri/install/step/3");
+        return redirect(\Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/step/3"));
     }
 
     public function finishAction()

@@ -9,12 +9,13 @@
         <title>CentauriCMS » Installation</title>
 
         <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+            "/public",
             "backend/css",
             "centauri.min.css"
         ) }}">
     </head>
 
-    <body class="centauri-installation">
+    <body>
         <section id="header">
             <div class="container-fluid sticked h-100">
                 <div class="nav-wrapper justify-content-space-between h-100-childs flex-centration-childs flex-ai-center-childs p-3">
@@ -57,7 +58,7 @@
 
                     <div class="row">
                         <div class="col-12 text-lg-right">
-                            <a role="button" href="/centauri/install/step/2" class="btn btn-primary waves-effect waves-light">
+                            <a role="button" href="{!! Centauri\CMS\BladeHelper\URIBladeHelper::link("/centauri/install/step/2") !!}" class="btn btn-primary waves-effect waves-light">
                                 Configure Domain
                             </a>
                         </div>
@@ -79,6 +80,7 @@
         <script>function CentauriEnv(){return null;}</script>
 
         <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+            "/public",
             "backend/js",
             "centauri.min.js"
         ) }}" async defer></script>
