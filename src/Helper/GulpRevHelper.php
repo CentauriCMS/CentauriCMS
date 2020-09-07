@@ -1,13 +1,15 @@
 <?php
 namespace Centauri\CMS\Helper;
 
-use Centauri\CMS\Centauri;
-
 /**
  * This class is for including asset files such as .css / .js files which are versioned and using the "gulp-rev" npm-module.
  */
 class GulpRevHelper
 {
+    protected static $options = [
+        "manifestFileName" => "rev-manifest.json"
+    ];
+
     /**
      * This method will return the absolute OR relative URL (if specified) of the requested rev-file.
      * It's only made for relative paths and wouldn't make any sense anyways to load an external .css-/.js-file from another host.
@@ -18,28 +20,13 @@ class GulpRevHelper
      * 
      * @return string
      */
-    public static function include($path, $subdir, $name, $manifestFileName = "rev-manifest.json")
+    public static function include($path, $name, $options = [])
     {
-        if($path[0] == "/") {
-            $path = substr($path, 1, strlen($path));
-        }
+        $options = array_merge(self::$options, $options);
+        $manifestFileName = $options["manifestFileName"];
 
-        $manifestFilePath = base_path("$path/$manifestFileName");
+        $revManifestContent = json_decode(file_get_contents($path . "../../" . $manifestFileName));
 
-        $path = "/$path";
-
-        if(!file_exists($manifestFilePath)) {
-            return "$path/$subdir/$name";
-        }
-
-        $content = json_decode(file_get_contents($manifestFilePath));
-
-        if(!isset($content->$name)) {
-            // return "$path/$subdir/$name";
-
-            Centauri::throwStaticException("The rev-manifest.json doesn't contains the identifier $name");
-        }
-
-        return "$path/$subdir/" . $content->$name;
+        return "/$path" . (isset($revManifestContent->$name) ? $revManifestContent->$name : $name);
     }
 }
