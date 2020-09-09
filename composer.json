@@ -16,7 +16,7 @@
     "require": {
         "php": "^7.2",
         "fideloper/proxy": "^4.0",
-        "laravel/framework": "^7.25",
+        "laravel/framework": "^8.0",
         "laravel/tinker": "^2.0",
         "spatie/db-dumper": "^2.16",
         "spatie/laravel-blade-javascript": "^2.5"
