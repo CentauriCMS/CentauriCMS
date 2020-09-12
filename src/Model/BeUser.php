@@ -41,13 +41,10 @@ class BeUser extends Model
      *
      * @var array
      */
-    protected $attributes = [
-        "username" => "",
-        "password" => "",
-    ];
+    protected $attributes = [];
 
     /**
-     * Getter for of the buttons of this slider item.
+     * Returns the roles of this backend user.
      * 
      * @return array|void
      */
@@ -55,13 +52,12 @@ class BeUser extends Model
     {
         return
             $this->hasMany(
-                \Centauri\CMS\Model\Role::class,
+                \Centauri\CMS\Model\BeRole::class,
                 "parent_uid",
                 "uid"
             )
             ->where("hidden", 0)
             ->get()
-            ->all()
-        ;
+        ->all();
     }
 }

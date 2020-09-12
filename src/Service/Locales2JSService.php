@@ -42,7 +42,8 @@ class Locales2JSService
                 "languages" => trans("backend/modules.languages.title"),
                 "extensions" => trans("backend/modules.extensions.title"),
                 "notifications" => trans("backend/modules.notifications.title"),
-                "system" => trans("backend/modules.system.title")
+                "system" => trans("backend/modules.system.title"),
+                "be_users" => trans("backend/modules.be_users.title")
             ]
         ];
 

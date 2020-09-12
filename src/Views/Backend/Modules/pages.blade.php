@@ -17,7 +17,7 @@
                             {!! $data["pageTreeHTML"] !!}
                         @endisset
 
-                        <div id="pagemodule_buttons" class="col-12 text-center">
+                        <div id="module_buttons" class="col-12 text-center">
                             <button class="btn btn-primary btn-floating fa-lg waves-effect mx-2" data-button-type="create">
                                 <i class="fas fa-plus"></i>
                             </button>

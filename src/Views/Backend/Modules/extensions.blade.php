@@ -61,7 +61,7 @@
                 </div>
             </div>
 
-            <div id="extensionsmodule_buttons" class="col-12 text-right">
+            <div id="module_buttons" class="col-12 text-right">
                 <button class="btn btn-info btn-floating fa-lg waves-effect" data-button-type="refresh">
                     <i class="fas fa-sync-alt"></i>
                 </button>

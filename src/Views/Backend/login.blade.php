@@ -18,11 +18,7 @@
             }
         </style>
 
-        {{-- <link rel="stylesheet" href="{{ asset('backend/css/centauri.min.css') }}"> --}}
-
-        {{-- {{ dd(public_path("rev-manifest.json")) }} --}}
-
-        <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+        <link rel="stylesheet" href="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
             "backend/css/",
             "centauri.min.css"
         ) }}">
@@ -77,11 +73,13 @@
             </div>
         </div>
 
-        <script src="/resources/js/centauri-env.js" async defer></script>
-
-        <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+        <script src="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
             "backend/js/",
             "centauri.min.js"
+        ) }}" async defer></script>
+
+        <script src="{{ Centauri\CMS\Helper\AssetHelper::include(
+            "resources/js/centauri-env.js"
         ) }}" async defer></script>
     </body>
 </html>

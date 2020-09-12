@@ -1,7 +1,7 @@
 {
     "name": "centauri/cms",
-    "description": "A CMS based on Laravel 7",
-    "version": "7.0.1",
+    "description": "A CMS based on Laravel 8",
+    "version": "8.0.3",
     "type": "project",
     "homepage": "https://centauricms.de/",
     "license": "proprietary",
@@ -71,6 +71,7 @@
             "Centauri\\CMS\\Processor\\": "src/Processor/",
             "Centauri\\CMS\\Provider\\": "src/Provider/",
             "Centauri\\CMS\\Resolver\\": "src/Resolver/",
+            "Centauri\\CMS\\Repository\\": "src/Repository/",
             "Centauri\\CMS\\Scheduler\\": "src/Scheduler/",
             "Centauri\\CMS\\Service\\": "src/Service/",
             "Centauri\\CMS\\Tracker\\": "src/Tracker/",

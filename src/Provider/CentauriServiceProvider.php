@@ -1,13 +1,12 @@
 <?php
 namespace Centauri\CMS\Provider;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class CentauriServiceProvider extends ServiceProvider
 {
     /**
-     * 
-     * 
      * @param string $dir
      * 
      * @return string
@@ -18,8 +17,6 @@ class CentauriServiceProvider extends ServiceProvider
     }
 
     /**
-     * 
-     *
      * @param string $dir
      * 
      * @return string
@@ -50,6 +47,7 @@ class CentauriServiceProvider extends ServiceProvider
             "server"
         ];
 
+        // Publishes Configs
         foreach($centauriConfigFiles as $config) {
             $this->publishes([
                 $this->getRootDir("config/centauri/$config.php") => config_path("centauri/$config.php")
@@ -62,6 +60,7 @@ class CentauriServiceProvider extends ServiceProvider
         // Migrations
         $this->loadMigrationsFrom($this->getCentauriDir("Migrations"));
 
+        // Publishes Migrations
         $this->publishes([
             $this->getCentauriDir("Migrations/") => database_path("migrations")
         ], "migrations");

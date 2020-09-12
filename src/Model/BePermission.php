@@ -3,7 +3,7 @@ namespace Centauri\CMS\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Permission extends Model
+class BePermission extends Model
 {
     /**
      * The table associated with the model.
@@ -41,6 +41,5 @@ class Permission extends Model
      *
      * @var array
      */
-    protected $attributes = [
-    ];
+    protected $attributes = [];
 }

@@ -8,7 +8,7 @@
         <title>CentauriCMS » {{ isset($title) ? $title : "" }}</title>
 
         @if(!isset($data["LOGIN_AJAX"]))
-            <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+            <link rel="stylesheet" href="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
                 "backend/css/",
                 "centauri.min.css"
             ) }}">
@@ -117,7 +117,8 @@
 
                     $items = [
                         "caches",
-                        "settings"
+                        "system",
+                        "beuser"
                     ];
 
                     $tabs = [];
@@ -164,26 +165,6 @@
                     </div>
                 </section>
 
-                {{-- <section id="header">
-                    <div class="container h-100">
-                        <div class="row h-100">
-                            
-
-                            <div class="col-8">
-                                <div class="text-right">
-                                    <a role="button" class="btn btn-primary btn-floating fa-lg waves-effect waves-light" data-dropdown="tools">
-                                        <i class="fas fa-ellipsis-v"></i>
-                                    </a>
-
-                                    <a role="button" class="btn btn-info btn-floating fa-lg waves-effect waves-light" data-dropdown="user">
-                                        {{ Str::ucfirst(Str::substr($data["beuser"]->getAttribute("username"), 0, 1)) }}                                        <i class="fas fa-user-circle"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section> --}}
-
                 <section id="content" class="h-100"></section>
             </section>
 
@@ -217,15 +198,15 @@
             </div>
         </div>
 
-        {{-- <script src="{{ asset('public/backend/js/centauri.min.js') }}" async defer></script> --}}
-
         @if(!isset($data["LOGIN_AJAX"]))
-            <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+            <script src="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
                 "backend/js/",
                 "centauri.min.js"
             ) }}" async defer></script>
 
-            <script src="/resources/js/centauri-env.js" async defer></script>
+            <script src="{{ Centauri\CMS\Helper\AssetHelper::include(
+                "resources/js/centauri-env.js"
+            ) }}" async defer></script>
         @endif
 
         <script>

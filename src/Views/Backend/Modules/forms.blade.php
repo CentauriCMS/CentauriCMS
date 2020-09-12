@@ -53,7 +53,7 @@
                 </div>
             </div>
 
-            <div id="formsmodule_buttons" class="col-12 text-right">
+            <div id="module_buttons" class="col-12 text-right">
                 <button class="btn btn-primary btn-floating fa-lg waves-effect" data-button-type="create">
                     <i class="fas fa-plus"></i>
                 </button>

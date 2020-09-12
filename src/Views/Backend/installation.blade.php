@@ -8,7 +8,7 @@
 
         <title>CentauriCMS » Installation</title>
 
-        <link rel="stylesheet" href="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+        <link rel="stylesheet" href="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
             "backend/css/",
             "centauri.min.css"
         ) }}">
@@ -78,7 +78,7 @@
 
         <script>function CentauriEnv(){return null;}</script>
 
-        <script src="{{ Centauri\CMS\Helper\GulpRevHelper::include(
+        <script src="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
             "backend/js/",
             "centauri.min.js"
         ) }}" async defer></script>

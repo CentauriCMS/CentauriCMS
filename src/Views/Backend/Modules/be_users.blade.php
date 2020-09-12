@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                @section("headertitle") BE-Users @endsection
+                @section("headertitle") Backend Users @endsection
 
                 <div class="table-wrapper">
                     <table id="be_users" class="table table-dark table-hover ci-bs-2">
@@ -21,19 +21,15 @@
                                 </th>
 
                                 <th>
-                                    BE-Name
+                                    Backend Name
                                 </th>
 
                                 <th>
-                                    Group(s)
+                                    Groups
                                 </th>
 
                                 <th>
-                                    State
-                                </th>
-
-                                <th>
-                                    Last login
+                                    Actions
                                 </th>
                             </tr>
                         </thead>
@@ -50,19 +46,30 @@
                                     </td>
 
                                     <td>
-                                        {{ $beuser->be_name }}
+                                        {{ $beuser->username }}
                                     </td>
 
                                     <td>
-                                        {{ $beuser->getGroups() }}
-                                    </td>
+                                        <div class="row be-users-row m-0">
+                                            @foreach($beuser->getRoles() as $role)
+                                                @if(isset(centauriconfig("be_roles")[$role->name]))
+                                                    @php
+                                                        $beRoleConfig = centauriconfig("be_roles")[$role->name];
 
-                                    <td>
-                                        {{ $beuser->state }}
-                                    </td>
+                                                        $additionalClasses = (isset($beRoleConfig["additionalClasses"]) ? " " . $beRoleConfig["additionalClasses"] : "");
+                                                        $overwriteClass = (isset($beRoleConfig["overwriteClass"]) ? $beRoleConfig["overwriteClass"] : "btn waves-effect waves-light p-2" . $additionalClasses);
+                                                    @endphp
 
-                                    <td>
-                                        {{ $beuser->last_login }}
+                                                    <button class="{{ $overwriteClass }}" data-role="{{ $role->name }}">
+                                                        {{ $role->name }}
+                                                    </button>
+                                                @else
+                                                    <button class="btn waves-effect waves-light p-2" data-role="{{ $role->name }}">
+                                                        {{ $role->name }}
+                                                    </button>
+                                                @endif
+                                            @endforeach
+                                        </div>
                                     </td>
 
                                     <td>
@@ -72,10 +79,6 @@
                                             </div>
 
                                             <div class="d-none d-lg-flex">
-                                                <a role="button" class="btn btn-info waves-effect waves-light p-2 mt-0 float-left exec-btn">
-                                                    EXEC
-                                                </a>
-
                                                 <div class="action btn btn-primary mt-0 p-2 waves-effect waves-light" data-action="edit">
                                                     <i class="fas fa-pen fa-lg"></i>
                                                 </div>
@@ -89,7 +92,7 @@
                 </div>
             </div>
 
-            <div id="schedulermodule_buttons" class="col-12 text-right">
+            <div id="module_buttons" class="col-12 text-right">
                 <button class="btn btn-primary btn-floating fa-lg waves-effect" data-button-type="create">
                     <i class="fas fa-plus"></i>
                 </button>

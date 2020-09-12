@@ -89,7 +89,7 @@
                 </div>
             </div>
 
-            <div id="filelistmodule_buttons" class="col-12 text-right">
+            <div id="module_buttons" class="col-12 text-right">
                 <div class="file-field position-absolute" style="right: 80px;">
                     <button class="btn btn-primary btn-floating fa-lg waves-effect waves-light" data-button-type="upload">
                         <i class="fas fa-cloud-upload-alt"></i>

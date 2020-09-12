@@ -17,7 +17,7 @@ class Centauri
      * 
      * @var string $version
      */
-    protected static $version = "7.0.2";
+    protected static $version = "8.0.3";
 
     /**
      * Centauri Core state-version.

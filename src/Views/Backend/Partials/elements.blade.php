@@ -7,13 +7,13 @@
 
             <small>
                 <b>
-                    @if($data["page"]->page_type != "storage")
+                    @if($data["page"]->page_type == "storage")
+                        » Storage
+                    @else
                         » 
                         <a href="{{ $data["page"]->uri }}" target="_blank">
                             {{ $data["page"]->uri }}
                         </a>
-                    @else
-                        » Storage
                     @endif
                 </b>
             </small>

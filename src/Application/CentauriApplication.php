@@ -105,7 +105,10 @@ class CentauriApplication
             /** Initialized by PathService class */
             "Paths" => [
                 "BaseURL" => ""
-            ]
+            ],
+
+            /** Register custom View-Components by using the ViewComponentResolver */
+            "ViewComponents" => []
         ];
 
         return $this->Centauri;

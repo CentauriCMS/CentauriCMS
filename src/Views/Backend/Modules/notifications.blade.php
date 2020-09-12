@@ -97,7 +97,7 @@
                 </div>
             </div>
 
-            <div id="notificationsmodule_buttons" class="col-12 text-right pb-5">
+            <div id="module_buttons" class="col-12 text-right pb-5">
                 <button class="btn btn-info btn-floating fa-lg waves-effect" data-button-type="refresh">
                     <i class="fas fa-sync-alt"></i>
                 </button>

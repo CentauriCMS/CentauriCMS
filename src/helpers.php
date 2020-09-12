@@ -3,7 +3,11 @@
 if(!function_exists("centauriconfig")) {
     function centauriconfig($identifier)
     {
-        return config("centauri")[$identifier];
+        if(!isset(config("centauri")[$identifier])) {
+            return false;
+        }
+
+        return config("centauri")[$identifier] ?? false;
     }
 }
 

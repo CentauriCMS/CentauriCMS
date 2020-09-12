@@ -5,7 +5,7 @@ class HeadTagAdditionalDatas
 {
     public function fetch()
     {
-        $kernelLevelCachingStatus = config("centauri-server")["KERNEL_LEVEL_CACHING"]["status"];
+        $kernelLevelCachingStatus = centauriconfig("server")["KERNEL_LEVEL_CACHING"]["status"] ?? false;
         $csrfToken = null;
 
         if(!$kernelLevelCachingStatus) {

@@ -128,7 +128,7 @@ class Request
                     $classname = $nnodes[2];
                     $method = $nnodes[3];
 
-                    $namespace = "\Centauri\CMS\\";
+                    $namespace = "Centauri\CMS\\";
 
                     switch($nnodes[1]) {
                         case "ajax":

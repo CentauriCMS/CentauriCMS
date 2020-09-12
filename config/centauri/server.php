@@ -2,6 +2,8 @@
 
 return [
     "PATHS" => [
+        "centauri_relative_base" => "/public/",
+
         "centauri_storage" => base_path("storage/Centauri") . "/",
         "centauri_storage_extensions" => base_path("storage/Centauri/Extensions") . "/"
     ],

@@ -3,7 +3,7 @@ namespace Centauri\CMS\Model;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Role extends Model
+class BeRole extends Model
 {
     /**
      * The table associated with the model.
@@ -45,7 +45,7 @@ class Role extends Model
     ];
 
     /**
-     * Getter for of the buttons of this slider item.
+     * Returns the permissions of this role.
      * 
      * @return array|void
      */
@@ -58,7 +58,6 @@ class Role extends Model
                 "uid"
             )
             ->get()
-            ->all()
-        ;
+        ->all();
     }
 }
