@@ -50,7 +50,7 @@
 
     "autoload": {
         "psr-4": {
-            "Centauri\\CMS\\": "src/Centauri/",
+            "Centauri\\CMS\\": "src/CMS/",
             "Centauri\\CMS\\Abstracts\\": "src/Abstracts/",
             "Centauri\\CMS\\AdditionalDatas\\": "src/AdditionalDatas/",
             "Centauri\\CMS\\Ajax\\": "src/Ajax/",

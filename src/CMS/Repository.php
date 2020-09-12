@@ -1,7 +1,7 @@
 <?php
-namespace Centauri\CMS\Repository;
+namespace Centauri\CMS;
 
-abstract class Repository
+class Repository
 {
     /**
      * The name of the table for this repository.
@@ -13,7 +13,7 @@ abstract class Repository
     /**
      * The eloquent class-instance for this repository.
      *
-     * @var null|object
+     * @var null|string
      */
     protected $eloquent = null;
 
@@ -42,9 +42,9 @@ abstract class Repository
     /**
      * This function returns the eloquent of this repository.
      *
-     * @return object
+     * @return string
      */
-    public function getEloquent(): object
+    public function getEloquent(): string
     {
         return $this->eloquent;
     }
@@ -56,7 +56,7 @@ abstract class Repository
      * 
      * @return void
      */
-    public function setEloquent(object $eloquent): void
+    public function setEloquent(string $eloquent): void
     {
         $this->eloquent = $eloquent;
     }

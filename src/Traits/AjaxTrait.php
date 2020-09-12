@@ -22,7 +22,7 @@ trait AjaxTrait
         $ajaxName = $ajaxName . "Ajax";
 
         try {
-            $this->initRepositories();
+            // $this->initRepositories();
 
             return $this->$ajaxName($request);
         } catch(ErrorException $e) {

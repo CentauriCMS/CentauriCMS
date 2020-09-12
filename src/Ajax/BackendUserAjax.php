@@ -1,12 +1,12 @@
 <?php
 namespace Centauri\CMS\Ajax;
 
-use Centauri\CMS\Repository\BackendUserRepository;
-use Centauri\CMS\Repository\Repository;
-use Centauri\CMS\Traits\AjaxTrait;
 use Illuminate\Http\Request;
+use Centauri\CMS\Centauri;
+use Centauri\CMS\Repository\BackendUserRepository;
+use Centauri\CMS\Traits\AjaxTrait;
 
-class BackendUserAjax extends Repository
+class BackendUserAjax
 {
     use AjaxTrait;
 
@@ -16,6 +16,11 @@ class BackendUserAjax extends Repository
      * @var BackendUserRepository
      */
     protected $backendUserRepository;
+
+    public function __construct()
+    {
+        $a = Centauri::makeInstance(BackendUserRepository::class);
+    }
 
     /**
      * This function returns data of a specific backend user record by its uid.
