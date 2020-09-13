@@ -1,7 +1,6 @@
 <?php
 namespace Centauri\CMS\Provider;
 
-use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class CentauriServiceProvider extends ServiceProvider
