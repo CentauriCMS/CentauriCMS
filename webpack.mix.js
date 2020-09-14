@@ -12,7 +12,7 @@
 let mix = require("laravel-mix");
 let fileName = "centauri.min";
 
-mix.setPublicPath("./public/backend/");
+mix.setPublicPath("src/public/backend/");
 
 mix.options({
     processCssUrls: true,
@@ -46,12 +46,12 @@ let jsDirNames = [
 ];
 
 mix
-    .js("resources/js/*.js", `public/backend/js/${fileName}.js`)
-    .sass("resources/scss/main.scss", `public/backend/css/${fileName}.css`)
+    .js("resources/js/*.js", `src/public/backend/js/${fileName}.js`)
+    .sass("resources/scss/main.scss", `src/public/backend/css/${fileName}.css`)
 ;
 
 jsDirNames.forEach(jsDirName => {
-    mix.js(`resources/js/${jsDirName}/**/*.js`, `public/backend/js/${fileName}.js`);
+    mix.js(`resources/js/${jsDirName}/**/*.js`, `src/public/backend/js/${fileName}.js`);
 });
 
 if(mix.inProduction()) {
@@ -61,8 +61,8 @@ if(mix.inProduction()) {
         const convertToFileHash = require("laravel-mix-make-file-hash");
 
         convertToFileHash({
-            publicPath: "public/backend/",
-            manifestFilePath: "public/backend/mix-manifest.json"
+            publicPath: "src/public/backend/",
+            manifestFilePath: "src/public/backend/mix-manifest.json"
         });
     });
 }
