@@ -25,7 +25,7 @@
                                 </th>
 
                                 <th>
-                                    Groups
+                                    Roles
                                 </th>
 
                                 <th>
@@ -55,16 +55,38 @@
                                                 @if(isset(centauriconfig("be_roles")[$role->name]))
                                                     @php
                                                         $beRoleConfig = centauriconfig("be_roles")[$role->name];
+                                                        $jsonBeRoleConfig = json_encode($beRoleConfig);
 
                                                         $additionalClasses = (isset($beRoleConfig["additionalClasses"]) ? " " . $beRoleConfig["additionalClasses"] : "");
                                                         $overwriteClass = (isset($beRoleConfig["overwriteClass"]) ? $beRoleConfig["overwriteClass"] : "btn waves-effect waves-light p-2" . $additionalClasses);
                                                     @endphp
 
-                                                    <button class="{{ $overwriteClass }}" data-role="{{ $role->name }}">
+                                                    <button 
+                                                        class="{{ $overwriteClass }}"
+                                                        data-uid="{{ $role->uid }}"
+                                                        data-roleconfig="{{ $jsonBeRoleConfig }}"
+                                                        onclick="Centauri.fn.__editRecord(
+                                                            event,
+                                                            this,
+                                                            'uid',
+                                                            'BackendRole',
+                                                            'editInEditorComponent'
+                                                        )"
+                                                    >
                                                         {{ $role->name }}
                                                     </button>
                                                 @else
-                                                    <button class="btn waves-effect waves-light p-2" data-role="{{ $role->name }}">
+                                                    <button 
+                                                        class="btn waves-effect waves-light p-2"
+                                                        data-uid="{{ $role->uid }}"
+                                                        onclick="Centauri.fn.__editRecord(
+                                                            event,
+                                                            this,
+                                                            'uid',
+                                                            'BackendRole',
+                                                            'editInEditorComponent'
+                                                        )"
+                                                    >
                                                         {{ $role->name }}
                                                     </button>
                                                 @endif

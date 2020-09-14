@@ -1,6 +1,7 @@
 <?php
 namespace Centauri\CMS\Provider;
 
+use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;
 
 class CentauriServiceProvider extends ServiceProvider
@@ -63,6 +64,11 @@ class CentauriServiceProvider extends ServiceProvider
         $this->publishes([
             $this->getCentauriDir("Migrations/") => database_path("migrations")
         ], "migrations");
+
+        // Publishes Publics
+        $this->publishes([
+            $this->getCentauriDir("public/") => public_path("backend")
+        ], "public");
     }
 
     /**

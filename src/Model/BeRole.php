@@ -51,13 +51,29 @@ class BeRole extends Model
      */
     public function getPermissions()
     {
-        return
-            $this->hasMany(
-                \Centauri\CMS\Model\Permission::class,
-                "parent_uid",
-                "uid"
-            )
-            ->get()
-        ->all();
+        $permissions = [];
+
+        if(is_null($this->permissions) || $this->permissions == "null") {
+            return [];
+        }
+
+        foreach(json_decode($this->permissions, true) as $permissionUid) {
+            $permissions[] = BePermission::where("uid", $permissionUid)->get()->first();
+        }
+
+        return $permissions;
+    }
+
+    public function setPermissions(array $permissions)
+    {
+        $permsUidArray = [];
+
+        foreach($permissions as $permission) {
+            $permsUidArray[] = $permission->uid;
+        }
+
+        $this->permissions = json_encode($permsUidArray);
+
+        return $this->save();
     }
 }

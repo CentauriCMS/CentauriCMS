@@ -29,7 +29,7 @@
                         <thead class="thead-dark">
                             <tr>
                                 <th>
-                                    Level
+                                    Priority
                                 </th>
 
                                 <th>

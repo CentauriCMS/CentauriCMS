@@ -18,10 +18,12 @@
             }
         </style>
 
-        <link rel="stylesheet" href="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
+        <link rel="stylesheet" href="{{ mix('/css/centauri.min.css', '/backend/dist') }}">
+
+        {{-- <link rel="stylesheet" href="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
             "backend/css/",
             "centauri.min.css"
-        ) }}">
+        ) }}"> --}}
     </head>
 
     <body>
@@ -73,10 +75,12 @@
             </div>
         </div>
 
-        <script src="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
+        <script src="{{ mix('/js/centauri.min.js', '/backend/dist') }}" async defer></script>
+
+        {{-- <script src="{{ Centauri\CMS\Helper\AssetHelper::revInclude(
             "backend/js/",
             "centauri.min.js"
-        ) }}" async defer></script>
+        ) }}" async defer></script> --}}
 
         <script src="{{ Centauri\CMS\Helper\AssetHelper::include(
             "resources/js/centauri-env.js"

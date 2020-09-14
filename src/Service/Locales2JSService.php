@@ -44,6 +44,16 @@ class Locales2JSService
                 "notifications" => trans("backend/modules.notifications.title"),
                 "system" => trans("backend/modules.system.title"),
                 "be_users" => trans("backend/modules.be_users.title")
+            ],
+
+            "permissions_msgs" => [
+                "modal_single_permission_info" => trans("backend/permissions_msgs.modal_single_permission_info"),
+            ],
+
+            "permissions" => [
+                "PAGES_CREATE" => trans("backend/permissions.pages.create"),
+                "PAGES_EDIT" => trans("backend/permissions.pages.edit"),
+                "PAGES_DELETE" => trans("backend/permissions.pages.delete")
             ]
         ];
 

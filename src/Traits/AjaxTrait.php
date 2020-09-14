@@ -22,8 +22,6 @@ trait AjaxTrait
         $ajaxName = $ajaxName . "Ajax";
 
         try {
-            // $this->initRepositories();
-
             return $this->$ajaxName($request);
         } catch(ErrorException $e) {
             if(!Centauri::keepSiteAlive() && !$request->ajax()) {

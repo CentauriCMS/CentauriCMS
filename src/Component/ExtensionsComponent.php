@@ -22,7 +22,7 @@ class ExtensionsComponent
                 $exists = Storage::disk("centauri_extensions")->get("$extName/ext_config.php");
 
                 if(!$exists) {
-                    Centauri::throwStaticException("Extension: '$extName' error - path: '$extConfigFilePath' configuration file for the extension itself is missing");
+                    throw new Exception("Extension: '$extName' error - path: '$extConfigFilePath' configuration file for the extension itself is missing");
                 } else {
                     $config = include $extConfigFilePath;
 

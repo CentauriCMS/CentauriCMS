@@ -75,4 +75,11 @@ class BackendAjax
 
         return response("Username/Password is wrong!", 500);
     }
+
+    public function logoutAjax(Request $request)
+    {
+        $request->session()->remove("CENTAURI_BE_USER");
+
+        return redirect("/centauri");
+    }
 }

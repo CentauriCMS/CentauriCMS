@@ -50,14 +50,25 @@ class BeUser extends Model
      */
     public function getRoles()
     {
-        return
-            $this->hasMany(
-                \Centauri\CMS\Model\BeRole::class,
-                "parent_uid",
-                "uid"
-            )
-            ->where("hidden", 0)
-            ->get()
-        ->all();
+        $roles = [];
+
+        foreach(json_decode($this->roles, true) as $rolesUid) {
+            $roles[] = BeRole::where("uid", $rolesUid)->get()->first();
+        }
+
+        return $roles;
+    }
+
+    public function setRoles(array $roles)
+    {
+        $rolesUidArray = [];
+
+        foreach($roles as $role) {
+            $rolesUidArray[] = $role->uid;
+        }
+
+        $this->roles = json_encode($rolesUidArray);
+
+        return $this->save();
     }
 }
